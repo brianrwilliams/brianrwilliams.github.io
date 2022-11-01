@@ -1037,23 +1037,56 @@ Suppose that $f(x)$ is defined on an interval and has exactly one local extrema 
 \item if it is a local minimum at $x=c$ then it is an absolute minimum. 
 \end{itemize} 
 
-\vspace{2cm} 
+\newpage
 
-Let's move on to concavity. 
+\section*{October 31, 2022}
+
+We've learned what the derivative tells us about the shape of a graph. 
+What about the second derivative? 
+This controls the feature called {\em concavity.}
+
 \begin{itemize} 
 \item A function is {\bf concave up} on an interval if $f'(x)$ is increasing on the interval. 
 \item A function is {\bf concave down} on an interval if $f'(x)$ is decreasing on the interval. 
 \item A point $x = c$ where $f$ changes concavity is called an {\bf inflection point.}
 \end{itemize} 
 
+An easy reformulation of the first two points is the following:
 
 \begin{itemize}
 \item If $f''(x) > 0$ on some interval, we say that $f$ is concave up on that interval. 
-\item If $f''(x) < 0$ on some interval, we say that $f$ is concave down on that interval. 
+\item If $f''(x) < 0$ on some interval, we say that $f$ is concave down on that interval.
+\item If $f''(c) = 0$ and $f''(c)$ changes sign as we go through $x=c$ then $x=c$ is an inflection point of the function. 
 \end{itemize} 
 
+\begin{eg}
+Describe the concavity and the inflection points of the following functions.
+\begin{itemize}
+\item[(a)] $f(x) = \arctan(x)$.
+\item[(b)] $f(x) = \sqrt{x} \ln x$ on the domain $x > 0$.
+\end{itemize}
+\end{eg}
 
+\newpage
 
+Next we move on to the second derivative test. 
+
+Suppose that $x=c$ is a critical point of a function $f$ which satisfies $f'(c) = 0$. 
+\begin{itemize} 
+\item If $f''(c) > 0$ then $f$ has a local minimum at $x=c$. 
+\item If $f''(c) < 0$ then $f$ has a local maximum at $x=c$. 
+\end{itemize}
+If $f''(c) = 0$ then the test is inconclusive---the function may have a local min/max or neither. 
+
+\newpage
+
+\begin{eg}
+Use the second derivative test to locate and characterize the local extrema of the function 
+\beqn
+f(x) = \frac{e^x}{x+1}
+\eeqn
+defined for $x \ne 1$.
+\end{eg}
 
 \newpage
 
