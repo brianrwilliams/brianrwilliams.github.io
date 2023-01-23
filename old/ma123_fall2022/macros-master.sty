@@ -1,0 +1,340 @@
+%%% GENERAL PACKAGES
+\usepackage{mathrsfs,amsmath,amscd,amsthm,amssymb,verbatim,subfigure,enumerate,graphicx,todonotes,grffile,longtable,wrapfig,rotating,textcomp,capt-of,xcolor,eurosym}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[normalem]{ulem}
+
+
+%%% FORMATTING
+%\usepackage[top=1in, bottom=1.2in, left=1in, right=1in,footskip=.5in]{geometry}
+
+\usepackage[top=1in, bottom=1.2in, left=1.5in, right=1.5in,footskip=.5in]{geometry} %for editing
+
+%\linespread{1.2}
+%\textwidth=14.5cm 
+%\oddsidemargin=1cm
+%\evensidemargin=1cm
+\setlength{\parskip}{7pt}
+%\setlength{\headsep}{20pt}
+%\usepackage{mathabx} %nicer looking tensor products / derivatives
+
+%%% FONT PACKAGES
+\usepackage{amsfonts,slashed}
+\usepackage[bbgreekl]{mathbbol}
+\usepackage{cmupint} %cool integrals
+\usepackage{mathpazo}
+%\usepackage{fouriernc}
+\usepackage[mathscr,mathcal]{euscript}
+%%% BIB
+
+\usepackage[backend=biber,
+            isbn=false,
+            doi=false,
+            giveninits=true,
+            style=alphabetic,
+            useprefix=true,
+            maxcitenames=5,
+            maxbibnames=5,
+            sorting=nyt,
+            labelnumber, defernumbers = true,
+            citestyle=alphabetic]{biblatex}
+\renewbibmacro{in:}{}
+%\usepackage[capitalise]{cleveref}
+\setlength{\headheight}{14pt}
+\renewcommand*{\bibfont}{\footnotesize}
+
+%%% REFS
+
+\definecolor{e-mail}{rgb}{0,.40,.80}
+\definecolor{reference}{rgb}{.20,.60,.22}
+\definecolor{citation}{rgb}{0,.40,.80}
+
+\usepackage[colorlinks=true,
+            linkcolor=reference,
+            citecolor=citation,
+            urlcolor=e-mail]{hyperref}
+\usepackage[capitalise]{cleveref}
+
+%%% NON TIKZ DIAGRAMS
+\usepackage[all,cmtip]{xy}
+
+
+%%% TIKZ STUFF
+\usepackage{tikz,tikz-cd}
+\usetikzlibrary{arrows,shapes}
+\usetikzlibrary{trees}
+\usetikzlibrary{matrix,arrows}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc,through}
+\usetikzlibrary{decorations.pathreplacing}
+\usepackage{pgffor}
+
+%%Feynman diagrams
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{decorations.markings}
+\tikzset{
+	% >=stealth', %%  Uncomment for more conventional arrows
+    vector/.style={decorate, decoration={snake}, draw},
+	provector/.style={decorate, decoration={snake,amplitude=2.5pt}, draw},
+	antivector/.style={decorate, decoration={snake,amplitude=-2.5pt}, draw},
+    fermion/.style={draw=black, postaction={decorate},
+        decoration={markings,mark=at position .55 with {\arrow[draw=black]{>}}}},
+    fermionbar/.style={draw=black, postaction={decorate},
+        decoration={markings,mark=at position .55 with {\arrow[draw=black]{<}}}},
+    fermionnoarrow/.style={draw=black},
+    gluon/.style={decorate, draw=black,
+        decoration={coil,amplitude=4pt, segment length=5pt}},
+    scalar/.style={dashed,draw=black, postaction={decorate},
+        decoration={markings,mark=at position .55 with {\arrow[draw=black]{>}}}},
+    scalarbar/.style={dashed,draw=black, postaction={decorate},
+        dwecoration={markings,mark=at position .55 with {\arrow[draw=black]{<}}}},
+    scalarnoarrow/.style={dashed,draw=black},
+    electron/.style={draw=black, postaction={decorate}/,
+        decoration={markings,mark=at position .55 with {\arrow[draw=black]{>}}}},
+	bigvector/.style={decorate, decoration={snake,amplitude=4pt}, draw},
+}
+
+%%% INSERTING PDFS
+\usepackage[final]{pdfpages}
+
+%%% THEOREM STYLES
+\pagestyle{plain}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{obs}[thm]{Observation}
+\newtheorem{conj2}[thm]{``Conjecture''}
+
+\theoremstyle{definition}
+\newtheorem{dfn}[thm]{Definition}
+\newtheorem{dfn/lem}{Definition/Lemma}
+\newtheorem{assumption}{Assumption}
+
+\theoremstyle{remark}
+\newtheorem{rmk}[thm]{Remark}
+\newtheorem{eg}[thm]{Example}
+
+\newcommand{\defterm}[1]{\textbf{\emph{#1}}}
+
+%%% EQUATION MACROS
+
+\def\beqn{\begin{equation}}
+\def\eeqn{\end{equation}}
+\def\beqnarray{\begin{eqnarray}}
+\def\eeqnarray{\end{eqnarray}}
+\def\beqnstar{\begin{eqnarray*}}
+\def\eqnestar{\end{eqnarray*}}
+
+%%% COMMENTS
+
+\def\brian{\todo[color={red!100!green!33},author=Brian]}
+\def\surya{\todo[color={blue!100!green!33},author=Surya]}
+\def\ingmar{\todo[color={green!100!black!33},author=Ingmar]}
+
+%%% GENERAL MACROS
+
+% symbols
+\def\hattensor{\mathbin{\Hat{\otimes}}}
+\def\Wedge{\bigwedge}
+\def\xto{\xrightarrow}
+\def\zbar{\Bar{z}}
+\def\dbar{\Bar{\partial}}
+\def\Tilde{\widetilde}
+\def\Hat{\widehat}
+\def\ul#1{\smash{\underline{#1}}}
+\def\oloc{{\cO}_{\rm loc}}
+\def\clie{{\rm C}}
+\def\cloc{{\rm C}_{\rm loc}}
+\def\<{\langle}
+\def\>{\rangle}
+\def\bu{\bullet}
+\def\define{\overset{\rm def}{=}}
+\def\til{\Tilde}
+
+% rm shortcuts
+\def\ev{{\rm ev}}
+\def\Obs{{\rm Obs}}
+\def\Ch{{\rm Ch}}
+\def\dgLie{{\rm dgLie}}
+\def\dR{{\rm dR}}
+\DeclareMathOperator{\Sym}{Sym}
+\def\d{{\rm d}}
+\DeclareMathOperator{\GL}{GL}
+\def\ch{{\rm ch}}
+\def\Def{{\rm Def}}
+\def\Map{{\rm Map}}
+\def\id{\mathbb{1}}
+\def\ch{{\rm ch}}
+\def\Aut{{\rm Aut}}
+\def\Rep{{\rm Rep}}
+\def\Fr{{\rm Fr}}
+\def\Mod{{\rm Mod}}
+\def\Bun{{\rm Bun}}
+\def\End{{\rm End}}
+\def\ad{{\rm ad}}
+\def\Ext{{\rm Ext}}
+\def\Gr{{\rm Gr}}
+\def\Sect{{\rm Sect}}
+\def\Hom{{\rm Hom}}
+\def\dvol{{\rm dvol}}
+\def\Vect{{\rm Vect}}
+\def\C{{\mathbf{C}}}
+
+% font macros
+\def\cA{\mathcal A}\def\cB{\mathcal B}\def\cC{\mathcal C}\def\cD{\mathcal D}
+\def\cE{\mathcal E}\def\cF{\mathcal F}\def\cG{\mathcal G}\def\cH{\mathcal H}
+\def\cI{\mathcal I}\def\cJ{\mathcal J}\def\cK{\mathcal K}\def\cL{\mathcal L}
+\def\cM{\mathcal M}\def\cN{\mathcal N}\def\cO{\mathcal O}\def\cP{\mathcal P}
+\def\cQ{\mathcal Q}\def\cR{\mathcal R}\def\cS{\mathcal S}\def\cT{\mathcal T}
+\def\cU{\mathcal U}\def\cV{\mathcal V}\def\cW{\mathcal W}\def\cX{\mathcal X}
+\def\cY{\mathcal Y}\def\cZ{\mathcal Z}
+
+\def\AA{\mathbb A}\def\BB{\mathbb B}\def\CC{\mathbb C}\def\DD{\mathbb D}
+\def\EE{\mathbb E}\def\FF{\mathbb F}\def\GG{\mathbb G}\def\HH{\mathbb H}
+\def\II{\mathbb I}\def\JJ{\mathbb J}\def\KK{\mathbb K}\def\LL{\mathbb L}
+\def\MM{\mathbb M}\def\NN{\mathbb N}\def\OO{\mathbb O}\def\PP{\mathbb P}
+\def\QQ{\mathbb Q}\def\RR{\mathbb R}\def\SS{\mathbb S}\def\TT{\mathbb T}
+\def\UU{\mathbb U}\def\VV{\mathbb V}\def\WW{\mathbb W}\def\XX{\mathbb X}
+\def\YY{\mathbb Y}\def\ZZ{\mathbb Z}
+
+\def\sA{\mathscr A}\def\sB{\mathscr B}\def\sC{\mathscr C}\def\sD{\mathscr D}
+\def\sE{\mathscr E}\def\sF{\mathscr F}\def\sG{\mathscr G}\def\sH{\mathscr H}
+\def\sI{\mathscr I}\def\sJ{\mathscr J}\def\sK{\mathscr K}\def\sL{\mathscr L}
+\def\sM{\mathscr M}\def\sN{\mathscr N}\def\sO{\mathscr O}\def\sP{\mathscr P}
+\def\sQ{\mathscr Q}\def\sR{\mathscr R}\def\sS{\mathscr S}\def\sT{\mathscr T}
+\def\sU{\mathscr U}\def\sV{\mathscr V}\def\sW{\mathscr W}\def\sX{\mathscr X}
+\def\sY{\mathscr Y}\def\sZ{\mathscr Z}
+
+\def\bA{\mathbf A}\def\bB{\mathbf B}\def\bC{\mathbf C}\def\bD{\mathbf D}
+\def\bE{\mathbf E}\def\bF{\mathbf F}\def\bG{\mathbf G}\def\bH{\mathbf H}
+\def\bI{\mathbf I}\def\bJ{\mathbf J}\def\bK{\mathbf K}\def\bL{\mathbf L}
+\def\bM{\mathbf M}\def\bN{\mathbf N}\def\bO{\mathbf O}\def\bP{\mathbf P}
+\def\bQ{\mathbf Q}\def\bR{\mathbf R}\def\bS{\mathbf S}\def\bT{\mathbf T}
+\def\bU{\mathbf U}\def\bV{\mathbf V}\def\bW{\mathbf W}\def\bX{\mathbf X}
+\def\bY{\mathbf Y}\def\bZ{\mathbf Z}
+
+\def\fA{\mathfrak A}\def\fB{\mathfrak B}\def\fC{\mathfrak C}\def\fD{\mathfrak D}
+\def\fE{\mathfrak E} \def\fF{\mathfrak F}\def\fG{\mathfrak G}\def\fH{\mathfrak H}
+\def\fI{\mathfrak I}\def\fJ{\mathfrak J}\def\fK{\mathfrak K}\def\fL{\mathfrak L}
+\def\fM{\mathfrak M}\def\fN{\mathfrak N}\def\fO{\mathfrak O}\def\fP{\mathfrak P}
+\def\fQ{\mathfrak Q}\def\fR{\mathfrak R}\def\fS{\mathfrak S}\def\fT{\mathfrak T}
+\def\fU{\mathfrak U}\def\fV{\mathfrak V}\def\fW{\mathfrak W}\def\fX{\mathfrak X}
+\def\fY{\mathfrak Y}\def\fZ{\mathfrak Z}
+
+\def\fa{\mathfrak a}\def\fb{\mathfrak b}\def\fc{\mathfrak c}\def\fd{\mathfrak d}
+\def\fe{\mathfrak e}\def\ff{\mathfrak f}\def\fg{\mathfrak g}\def\fh{\mathfrak h} \def\fj{\mathfrak j}\def\fk{\mathfrak k}\def\fl{\mathfrak l} \def\fm{\mathfrak m}\def\fn{\mathfrak n}\def\fo{\mathfrak o}\def\fp{\mathfrak p} \def\fq{\mathfrak q}\def\fr{\mathfrak r}\def\fs{\mathfrak s}\def\ft{\mathfrak t}
+\def\fu{\mathfrak u}\def\fv{\mathfrak v}\def\fw{\mathfrak w}\def\fx{\mathfrak x}
+\def\fy{\mathfrak y}\def\fz{\mathfrak z}
+
+\def\sfA{\mathsf A}\def\sfB{\mathsf B}\def\sfC{\mathsf C}\def\sfD{\mathsf D}
+\def\sfE{\mathsf E}\def\sfF{\mathsf F}\def\sfG{\mathsf G}\def\sfH{\mathsf H}
+\def\sfI{\mathsf I}\def\sfJ{\mathsf J}\def\sfK{\mathsf K}\def\sfL{\mathsf L}
+\def\sfM{\mathsf M}\def\sfN{\mathsf N}\def\sfO{\mathsf O}\def\sfP{\mathsf P}
+\def\sfQ{\mathsf Q}\def\sfR{\mathsf R}\def\sfS{\mathsf S}\def\sfT{\mathsf T}
+\def\sfU{\mathsf U}\def\sfV{\mathsf V}\def\sfW{\mathsf W}\def\sfX{\mathsf X}
+\def\sfY{\mathsf Y}\def\sfZ{\mathsf Z}
+
+
+%random
+\def\Reszero{\underset{z=0}{\rm Res}}
+\def\Res{{\rm Res}}
+\def\L8{L_\infty}
+\def\Vert{\mathbb{V}{\rm ert}}
+\def\hSym{\Hat{\Sym}}
+\def\ll{\llbracket}
+\def\rr{\rrbracket}
+\DeclareMathOperator{\Tr}{Tr}
+\def\wbar{\Bar{w}}
+\def\Bar{\overline}
+\def\lie#1{\ensuremath{\mathfrak{#1}}}
+\def\PV{{\rm PV}}
+\def\T{{\rm T}}
+
+%mtheory stuff
+\def\del{\partial}
+\def\hotimes{\, \Hat{\otimes} \,}
+\def\ep{\epsilon}
+\def\div{\partial_{\Omega}}
+\def\m2{\mathfrak{m}2\mathfrak{brane}}
+
+%%% INGMAR STUFF
+\usepackage{xparse}
+\NewDocumentCommand \deq { o m }{
+\begin{equation}
+#2
+\IfNoValueF{#1}{\label{#1}}
+\end{equation}
+}
+\NewDocumentCommand \parsec { o }{
+\subsubsection{}
+\IfNoValueF{#1}{\label{#1}}
+}
+
+%%% MTHEORY STUFF
+
+%\usepackage{physics}
+%\usepackage{amssymb,amsmath,mathrsfs,mathtools}
+%%\usepackage[numbers,square]{natbib}
+%\usepackage[backend=bibtex,style=ieee]{biblatex}
+%\addbibresource{twisted.bib}
+
+\def\R{\mathbf{R}}
+\def\C{\mathbf{C}}
+\def\Q{\mathbf{Q}}
+\def\Z{\mathbf{Z}}
+\def\N{\mathcal{N}}
+\def\FSF{\mathscr{F}}
+\def\Berk{\mathscr{D}}
+\def\epar{\varepsilon}
+\DeclareMathOperator{\Crit}{Crit}
+\DeclareMathOperator{\Fun}{Fun}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Spin}{Spin}
+\DeclareMathOperator{\spin}{spin}
+\DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\Dol}{Dol}
+\def\lie#1{\ensuremath{\mathfrak{#1}}}
+\def\su{\mathfrak{su}}
+\def\so{\lie{so}}
+\def\Sy{\ensuremath{\mathsf{S}}}
+\def\O{\ensuremath{\mathscr{O}}}
+\def\ST{M}
+\def\STlie{\st^0}
+\def\bu{\bullet}
+\def\strict{\ensuremath{\text{strict}}}
+
+%% Note: I did this to avoid clutter, but I'm not wedded to the change!
+\hyphenation{su-per-sym-me-try}
+\hyphenation{Che-val-ley}
+\hyphenation{Ei-len-berg}
+\def\CE{Che\-val\-ley--Ei\-len\-berg}
+\hyphenation{Lo-ren-tz-ian}
+\hyphenation{Eu-clid-ean}
+\def\N{\cN}
+
+%% String string
+\newcommand\thooft{`t Hooft\,}
+\newcommand\br{\Bar}
+\def\define{\overset{\rm def}{=}}
+\def\ep{\varepsilon}
+\def\zbar{{\overline{z}}}
+\def\Weyl{{\rm Weyl}}
+\def\Cl{{\rm C}\ell}
+\def\U{{\rm U}}
+\def\PV{{\rm PV}}
+\def\thetabar{\Bar{\theta}}
+\def\hotimes{\; \Hat{\otimes} \;} 
+\newcommand{\op}{\operatorname}
+\def\ibar{{\Bar{i}}}
+\def\jbar{{\Bar{j}}}
+\def\CP{{\mathbf{CP}}}
+\def\br{\Bar}
+\def\eps{{\epsilon}}
+\def\what{\Hat}
+\newcommand{\abs}[1]{\left| #1 \right|}
+\newcommand{\ip}[1]{\left\langle #1 \right\rangle}
+\newcommand{\norm}[1]{\left\| #1 \right\|}
+
+\newcommand{\sslash}{\mathbin{/\mkern-6mu/}}
