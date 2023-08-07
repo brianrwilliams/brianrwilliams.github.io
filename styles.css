@@ -37,3 +37,10 @@ td{
 h2{
  text-align:center;
 }
+
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
