@@ -45,3 +45,7 @@ details > summary {
 details > summary::-webkit-details-marker {
   display: none;
 }
+
+summary{
+padding:20px;
+}
