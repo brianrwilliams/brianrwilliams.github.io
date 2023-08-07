@@ -39,6 +39,7 @@ h2{
 }
 
 details > summary {
+	padding:20px;
   list-style: none;
 }
 details > summary::-webkit-details-marker {
