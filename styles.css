@@ -49,3 +49,7 @@ details > summary::-webkit-details-marker {
 summary{
 padding:20px;
 }
+
+p {
+  margin: 35px;
+}
