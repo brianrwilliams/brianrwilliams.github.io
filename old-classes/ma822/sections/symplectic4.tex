@@ -1,0 +1,202 @@
+\documentclass[../master.tex]{subfiles}
+%\IfEq{\jobname}{\detokenize{main}}{}{%
+%    \setcounterref{chapter}{../master-chap:hilbertpts}
+%    \addtocounter{chapter}{0}
+%}
+
+\newcommand\ssslash{\slash\!\!\!\slash\!\!\!\slash}
+%\addbibresource{refs}
+
+\begin{document} 
+
+\chapter{The Hilbert scheme as a reduction}
+
+Recall the following example.
+Equip $V = \text{End}(\C^n)$ with a K\"ahler structure induced from the standard one on $\C^n$.
+The Hermitian inner product is simply $(x,y) = \op{tr}(x y^\dagger)$ and the symplectic form is $\omega(x,y) = \op{Im}(x,y)$.
+Consider the adjoint action through unitary matrices
+\beqn
+\text{End}(\C^n) \ni x \mapsto g^{-1} x g , \quad g \in U(n) .
+\eeqn
+The corresponding moment map is simply
+\beqn
+\mu_\R (x) = \frac{\im}{2} [x,x^\dagger] .
+\eeqn
+
+The Kempf--Ness theorem gives a natural isomorphism
+\beqn
+\mu^{-1}(0) \slash U(n) \simeq \op{End}(\C^n) \sslash GL(n,\C) .
+\eeqn
+We have seen that the right hand side is isomorphic to $\C^n$; the closed orbits are the diagonalizable matrices and $\C^n$ consists of the sets of eigenvalues.
+The right hand side is the quotient by $U(n)$ of matrices satisfying $[x,x^\dagger]=0$.
+Any normal matrix can be diagonalized by a unitary matrix.
+This is an explicit example of the Kempf--Ness theorem.
+
+\section{The symmetric product}
+
+Let $V,W$ be complex vector spaces of dimension $n$ and $1$ respectively.
+Let
+\beqn
+H_{n,1} \define \op{End}(V) \oplus \op{End}(V) \oplus \op{Hom}(W,V) \oplus \op{Hom}(V,W) .
+\eeqn
+There is a natural $GL(V,\C)$ action on $H_{n,1}$ defined by
+\beqn\label{eqn:fullaction}
+(B_1,B_2,i,j) \mapsto (g^{-1} B_1 g, g^{-1} B_2 g, g^{-1} i, j g) , \quad g \in GL(V,\C).
+\eeqn
+
+Notice that
+\beqn
+H_{n,1} = \T^* \op{End}(V) \oplus \T^* \op{Hom}(W,V) .
+\eeqn
+In particular, $H_{n,1}$ is naturally a complex symplectic vector space.
+The $GL(V,\C)$ action is Hamiltonian with respect to this symplectic structure and the (holomorphic) moment map 
+\beqn
+\mu_\C \colon H_{n,1} \to \lie{gl}(V)^* \simeq \lie{gl}(V) 
+\eeqn
+is 
+\beqn
+\mu_\C (B_1,B_2,i.j) = [B_1,B_2] + ij.
+\eeqn
+By our work in previous lectures we have identified the $n$th symmetric product of $\C^2$ with the GIT Hamiltonian reduction
+\beqn
+S^n \C^2 \simeq \mu_\C^{-1} (0) \sslash GL(V,\C) .
+\eeqn 
+Via this description it makes it manifest that $S^n \C^n$ is equipped with a Poisson structure.
+(Describe it explicitly.)
+
+Equip $V,W$ with Hermitian inner products so that the vector space is equipped with an induced Hermitian inner product.
+We have a natural action of $g \in U(V) \simeq U(n)$ on $H_{n,1}$ defined by restriction of the action \eqref{eqn:fullaction}.
+The real moment map for this unitary action is
+\beqn
+\mu_1 (B_1,B_2,i,j) = \frac{\im}{2} \left([B_1,B_1^\dagger] + [B_2,B_2^\dagger] + i i^\dagger - j^\dagger j \right).
+\eeqn
+
+Thus, by the Kempf--Ness theorem we have another description of $S^n \C^2$ 
+\beqn
+\mu_\C^{-1} (0) \sslash GL(n,\C) \simeq S^n \C^2 \simeq \left(\mu_1^{-1}(0) \cap \mu_\C^{-1}(0) \right) \slash U(n) .
+\eeqn
+
+\section{Hilbert scheme}
+
+Consider the complex vector space $H_{n,1}$ equipped with its $GL(n,\C)$ action.
+Define the character $\chi \colon GL(n,\C) \to \C^\times$ by 
+\beqn
+\chi(g) = (\det g)^l 
+\eeqn
+where $l$ is an arbitrary positive integer.
+
+\begin{prop}
+There is an isomorphism
+\beqn
+\Hilb_n(\C^2) \simeq \mu_\C^{-1}(0) \sslash_\chi GL(n) .
+\eeqn
+\end{prop}
+
+This result follows from the following lemma asserting that the familiar stability condition that we originally used in the description of the Hilbert scheme translates to the statement that orbits are closed in the semi-stable locus.
+
+\begin{lem}
+The tuple $(B_1,B_2,i,j)$ satisfies the stability condition if and only if it is $\chi$-semi stable.
+\end{lem}
+
+\begin{proof}
+Recall that the stability condition says that there is no subspace $S \subset V$ such that 
+\begin{itemize}
+\item $S$ is invariant for $B_1,B_2$.
+\item $\op{im}(i) \subset S$.
+\end{itemize}
+By way of contradiction let's assume that there exists such an $S$ and that 
+\beqn
+G \cdot (B_\alpha,i,j;z) \subset H_{n,1} \times \C 
+\eeqn
+is closed.
+
+As we have done before, let's take a complementary subspace $S^\perp$ such that $V = S \oplus S^\perp$.
+Then in this form the matrices $B_\alpha$ take the form
+\beqn
+B_{\alpha} = \begin{pmatrix} \star & \star \\ 0 & \star \end{pmatrix}
+\eeqn
+And $i$ is a column vector of the form $i = \begin{pmatrix} \star & 0 \end{pmatrix}^t$.
+Let 
+\beqn
+g(t) \define \begin{pmatrix} \id_S & 0 \\ 0 & t^{-1} \id_{S^\perp} \end{pmatrix} .
+\eeqn
+Then
+\beqn
+g(t) B_\alpha g(t)^{-1} = \begin{pmatrix} \star & t \star \\ 0 & \star \end{pmatrix}, \quad g(t) i = i .
+\eeqn
+On the other hand $(\det g(t))^{-l} z = t^{l \cdot \dim S^\perp} z \to 0$ as $t \to 0$ since $\dim S^\perp > 0$ by assumption.
+This contradicts the fact that $G \cdot (B_\alpha,i,j;z)$ is closed.
+
+Next suppose that the stability condition holds.
+By contradiction suppose that $G \cdot (B_\alpha, i,j;z)$ is not closed.
+
+\end{proof}
+
+
+To get a similar description of the Hilbert scheme as a K\"ahler quotient we need to discuss a small generalization of the Kempf--Ness theorem where the affine GIT quotient is replaced by the twisted GIT quotient.
+
+Suppose $K$ is a compact Lie group with complexification $G$ both acting in an appropriate way on a Hermitian vector space $V$.
+Let $\chi \colon G \to \C^\times$ be a character which restricts to a character $\chi_\R \colon K \to U(1)$.
+We identify $\lie{u}(1) \simeq \im \R$.
+Then, the variant of the Kempf--Ness theorem is an isomorphism
+\beqn
+\mu^{-1}_\R (\im \, \d \chi_\R) \slash K \simeq V \sslash_\chi G 
+\eeqn
+where we view the derivative of $\chi_\R$ at the identity as an element $\d \chi_\R \in \im \lie{k}^*$.
+Applied to the Hilbert scheme example we then have a sequence of isomorphisms
+\beqn
+\mu_\C^{-1} (0) \sslash_\chi GL(n,\C) \simeq \Hilb_n(\C^2) \simeq \left(\mu_1^{-1}(\im \, \d \chi_\R) \cap \mu_\C^{-1}(0) \right) \slash U(n) .
+\eeqn
+
+Recall that the Hilbert--Chow morphism is a resolution of singularities $\pi \colon \Hilb_n(\C^2) \to S^n(\C^2)$.
+This morphism can be identified with the canonical map from the twisted/projective GIT quotient to the affine GIT quotient
+\beqn
+\Hilb_n(\C^2) \simeq \mu_\C^{-1} (0) \sslash_\chi GL(n,\C) \xto{\pi} \mu_\C^{-1} (0) \sslash GL(n,\C) \simeq S^n(\C^2) .
+\eeqn
+
+\section{HyperK\"ahler quotients}
+
+In this section we will survey the result that the Hilbert scheme on $\C^2$, and more generally the moduli of torsion-free sheaves, can be given the structure of a hyperk\"ahler manifold.
+
+Recall that a K\"ahler manifold is a Riemannian manifold of dimension $2n$ with a compatible almost complex structure $\sfI$ which is integrable and such that the K\"ahler two-form $\omega$ is $\d$-closed.
+This is equivalent to asking that the complex structure $I$ be parallel with respect to the Levi-Civita connection $\nabla \sfI = 0$.
+For a K\"ahler manifold, the holonomy group of $\nabla$ is contained in $U(n)$.
+In other words, the $SO(2n)$ bundle of frames admits a reduction of structure to $U(n)$.
+
+A hyperK\"ahler manifold is a smooth Riemannian manifold $(M,g)$ with a triple of almost complex structures $\sfI,\sfJ,\sfK$ satisfying
+\begin{enumerate}
+\item Each $\sfI,\sfJ,\sfK$ preserve the metric $g$.
+\item $\sfI,\sfJ,\sfK$ satisfy the quaternionic relations $\sfI^2=\sfJ^2=\sfK^2=\sfI\sfJ\sfK=-1$.
+\item $\sfI,\sfJ,\sfK$ are parallel with respect to the Levi-Civita connection $\nabla \sfI = \nabla \sfJ = \nabla \sfK = 0$.
+\end{enumerate}
+
+These conditions imply that the holonomy group of $\nabla$ is contained in the real symplectic group $Sp(n) \subset SO(4n)$.
+Each pair $(g,\sfI),(g,\sfJ),(g,\sfK)$ defines a K\"ahler structure with K\"ahler forms we denote by $\omega_\sfI,\omega_\sfJ,\omega_\sfK$.
+If we fix the complex structure $I$ then the combination 
+\beqn
+\omega_\C \define \omega_\sfJ + \im \omega_\sfK 
+\eeqn
+is holomorphic.
+Meaning $\omega_\C$ is Hodge type $(2,0)$ and is $\dbar_\sfI$-closed.
+
+Suppose that $K$ is a compact real Lie group acting on a hyperK\"ahler manifold $X$ in a way that preserves $\sfI,\sfJ,\sfK,g$.
+
+\begin{dfn}
+A map 
+\beqn
+\mu \colon X \to \R^3 \otimes \lie{k}^*
+\eeqn
+is a \defterm{hyperK\"ahler moment map} if 
+\begin{enumerate}
+\item $\mu$ is $K$-equivariant.
+\item If $\mu = (\mu_\sfI,\mu_\sfJ,\mu_\sfK)$ then
+\beqn
+\<\d \mu_\sfI (v), a\> = \omega_\sfI(\xi_a, v)
+\eeqn
+for any $v \in \T X$, $a \in \lie{k}$ and similarly for $\sfJ,\sfK$.
+\end{enumerate}
+\end{dfn}
+
+%\printbibliography
+
+\end{document}
