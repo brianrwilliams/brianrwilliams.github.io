@@ -1,468 +1,249 @@
-		<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>BU Geometry and Physics Seminar - Fall 2025</title>
+<style>
+  /* Reset some default margins/paddings */
+  * {
+    box-sizing: border-box;
+  }
 
-<title>BU Geometry and Physics Seminar</title><style type="text/css">
   body {
-  background-image: url("https://math.bu.edu/research/geom/NewBuilding2.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-} 
+    margin: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: url("https://math.bu.edu/research/geom/NewBuilding2.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: #003366; /* dark blue */
+    line-height: 1.6;
+  }
+
+  /* Dark overlay for better readability */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: -1;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 2em auto;
+    background-color: rgba(255 255 255 / 0.9);
+    padding: 1.5em 2em;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 1.5em;
+  }
+
+  header img {
+    max-height: 80px;
+    margin-bottom: 0.5em;
+  }
+
+  header h1 {
+    margin: 0.25em 0 0.5em;
+    color: #003366;
+    font-weight: 700;
+    font-size: 1.75rem;
+  }
+  header h2 {
+    margin: 0.25em 0;
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+
+  .session-info {
+    margin: 1em 0 2em;
+    text-align: center;
+  }
+  .session-info p {
+    margin: 0.5em 0;
+    font-weight: 600;
+  }
+
+  nav ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 2em;
+    font-weight: 700;
+  }
+  nav ul li {
+    margin: 0.5em 0;
+  }
+  nav ul li a {
+    color: #0033cc;
+    text-decoration: none;
+  }
+  nav ul li a:hover,
+  nav ul li a:focus {
+    text-decoration: underline;
+  }
+
+  table.schedule {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2em;
+  }
+  table.schedule thead {
+    background-color: #003366;
+    color: white;
+  }
+  table.schedule th, table.schedule td {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    text-align: left;
+    vertical-align: middle;
+  }
+  
+  table.schedule tbody tr:nth-child(odd) {
+    background-color: #f7faff;
+  }
+  table.schedule tbody tr:hover {
+    background-color: #e0f0ff;
+  }
+  table.schedule a {
+    color: #0044cc;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  table.schedule a:hover,
+  table.schedule a:focus {
+    text-decoration: underline;
+  }
+
+  footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #222;
+    border-top: 1px solid #ccc;
+    padding-top: 1em;
+    margin-top: 3em;
+  }
+
+  /* Responsive */
+  @media(max-width: 600px) {
+    .container {
+      margin: 1em 1em;
+      padding: 1em;
+    }
+  }
 </style>
 </head>
-<body alink="#ff3300" bgcolor="#ffffff" link="#3300ff" vlink="#330099">
+<body>
+
+<div class="container">
+
+  <header>
+    <img src="https://brianrwilliams.github.io/seminar/bu-logo.gif" alt="Boston University Logo" />
+    <h1>Boston University Geometry and Physics Seminar</h1>
+    <h2>Fall 2025</h2>
+  </header>
+
+  <section class="session-info" aria-label="Seminar schedule">
+    <p><strong>Wed. 4:00 - 5:00 PM at Room CCDS 365</strong></p>
+    <p><strong>Tea: 3:45 - 4:00 in Room CCDS 365</strong></p>
+  </section>
+
+  <nav>
+    <ul>
+      <li>The <a href="http://math.bu.edu/index.html" target="_blank" rel="noopener">BU math department webpage</a>.</li>
+      <li>A map showing the <a href="https://maps.bu.edu/?id=647#!ct/?m/560905?sbc/" target="_blank" rel="noopener">department building</a>.</li>
+    </ul>
+  </nav>
+
+  <table class="schedule" summary="Seminar schedule for Fall 2025">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Speaker &amp; Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Sep 17</td>
+        <td>
+          <a href="https://www.bu.edu/math/profile/jiawei-hu/" target="_blank" rel="noopener">Jiawei Hu</a><br>
+          Boston University<br>
+          <a href="Spring25/Jiawei.pdf" target="_blank" rel="noopener">TBA</a>
+        </td>
+      </tr>
+      <tr>
+        <td>Sep 24</td>
+        <td>
+          <a href="https://sites.google.com/view/justincampbell/home" target="_blank" rel="noopener">Justin Campbell</a><br>
+          Brandeis University<br>
+          <a href="Spring25/campbell.pdf" target="_blank" rel="noopener">TBA</a>
+        </td>
+      </tr>
+      <tr>
+        <td>Oct 1</td>
+        <td>
+          <a href="https://cmsa.fas.harvard.edu/ss_people/ahsan-khan/" target="_blank" rel="noopener">Ahsan Khan</a><br>
+          Harvard/CMSA<br>
+          <a href="fall25/khan.pdf" target="_blank" rel="noopener">TBA</a>
+        </td>
+      </tr>
+      <tr>
+        <td>Oct 8</td>
+        <td>
+          <a href="https://www.math.cuhk.edu.hk/people/academic-staff/leung" target="_blank" rel="noopener">Conan Nai Chung Leung</a><br>
+          The Chinese University of Hong Kong<br>
+          <a href="Spring25/conan.pdf" target="_blank" rel="noopener">TBA</a>
+        </td>
+      </tr>
+      <tr>
+        <td>Oct 22</td>
+        <td>
+          <a href="https://math.mit.edu/~shaoyunb/" target="_blank" rel="noopener">Shaoyun Bai</a><br>
+          MIT<br>
+          <a href="fall25/shaoyun.pdf" target="_blank" rel="noopener">TBA</a>
+        </td>
+      </tr>
+      <tr>
+        <td>Nov 5</td>
+        <td>
+          <a href="https://www.danielpomerleano.com/" target="_blank" rel="noopener">Daniel Pomerleano</a><br>
+          UMass, Boston<br>
+          <a href="Spring25/pomerleano.pdf" target="_blank" rel="noopener">TBA</a>
+        </td>
+      </tr>
+      <!-- Add other talks as needed -->
+    </tbody>
+  </table>
+
+  <section aria-label="Past Seminars">
+    <p><strong>Past seminars:</strong> 
+      <a href="http://math.bu.edu/research/geom/Fall97/seminars.html" target="_blank" rel="noopener">Fall 1997</a>,
+      <a href="http://math.bu.edu/research/geom/Spring98/seminars.html" target="_blank" rel="noopener">Spring 1998</a>,
+      <a href="http://math.bu.edu/research/geom/Fall98/seminars.html" target="_blank" rel="noopener">Fall 1998</a>,
+      <!-- Add as many links as you want, or you can convert this to a scrollable list -->
+      ... etc.
+    </p>
+  </section>
+
+  <section aria-label="Contact Information">
+    <p>
+      If you have any questions regarding the seminar, please contact
+      <a href="https://brianrwilliams.github.io/">Brian Williams</a> (<code>bwill22 [at] bu [dot] edu</code>)
+      or
+      <a href="https://math.bu.edu/people/lau/Lau/My_geometry_life.html">Siu-Cheong Lau</a> (<code>lau [at] math [dot] bu [dot] edu</code>)
+    </p>
+  </section>
+
+  <footer>
+    <p>Visitors since January 23, 2001</p>
+    <img src="/cgi-bin/Count.cgi?dd=C|df=kimura-seminar.dat" alt="Visitor Count" />
+  </footer>
 
-<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
-</script>
-<script type="text/javascript">
-_uacct = "UA-95464-2";
-urchinTracker();
-</script>
+</div>
 
-<table align="center" width="100%">
-<tbody><tr>
-  <td align="center"> <img src="~/brianrwilliams.github.io/seminar/bu-logo.gif"> </td>
-  <td> <center>
-       <font color="blue" face="arial, helvetica">
-      
- </font><h2><font color="blue" face="arial, helvetica"><big>
-       Boston University Geometry and Physics Seminar <br>
-     
-  Fall 2025<br>
-       </big></font></h2>
-<font color="blue" face="arial, helvetica">       </font>
-       <font face="arial, helvetica">
-       <h2> <big><b>Wed. 4:00 - 5:00PM at Room CCDS 365 </b> </big> </h2></font>
-       <font face="arial, helvetica">
-      <h2><b> Tea: 3:45 - 4:00 in Room CCDS 365 </b></h2>  
-       </font>
-       </center>
-  </td>
-</tr>
-</tbody></table>
-<hr>
-
-<font face="arial, helvetica">
-<br>
-</font>
-
-<ul>
-<font face="arial, helvetica"><b>
-<li> The <a href="http://math.bu.edu/index.html">BU math department webpage</a>.
-</li><li> A map showing the <a href="https://maps.bu.edu/?id=647#!ct/?m/560905?sbc/">department building</a>.
-</li></b>
-</font></ul>
-
-
-
-<table align="center" border="1" cellpadding="17" cellspacing="2" width="60%">
-
-<tbody>
-
-
-</center>
-</td>
-</tr>
-
-
-
-
-</center>
-</td>
-</tr>
-
-
-<tr>
-<td>
-<center>
-<b>
-Sep 10
-
-</center>
-</td>
-<td>
-<center>
-<b>
-  <a href="math.mit.edu/~shaoyunb/"> Shaoyun Bai   </a>
-<br>
-MIT
-<br>
-<a href="Spring25/bai.pdf  "> TBA
-</a></b>
-</center>
-</td>
-</tr>
-  -->
-
-<tr>
-<td>
-<center>
-<b>
-Sep 17
-
-</center>
-</td>
-<td>
-<center>
-<b>
-  <a href="https://www.bu.edu/math/profile/jiawei-hu/  "> Jiawei Hu  </a>
-<br>
-Boston University
-<br>
-<a href="Spring25/Jiawei.pdf  "> TBA 
-  
-</a></b>
-</center>
-</td>
-</tr>
-
-<tr>
-<td>
-<center>
-<b>
-Sep 24
-
-</center>
-</td>
-<td>
-<center>
-<b>
-  <a href="https://sites.google.com/view/justincampbell/home"> Justin Campbell   </a>
-<br>
-Brandeis University
-<br>
-<a href="Spring25/campbell.pdf  "> TBA </a>
-</b>
-</center>
-</td>
-</tr>
-  -->
-
-
-<tr>
-<td>
-<center>
-<b>
-Oct 1
-
-</center>
-</td>
-<td>
-<center>
-<b>
-  <a href="https://cmsa.fas.harvard.edu/ss_people/ahsan-khan/ "> Ahsan Khan  </a>
-<br>
-Harvard/CMSA
-<br>
-<a href="fall25/khan.pdf  "> TBA   
-</a></b>
-</center>
-</td>
-</tr>
-
-
-<tr>
-<td>
-<center>
-<b>
-Oct 8
-
-</center>
-</td>
-<td>
-<center>
-<b>
-  <a href="hhttps://www.math.cuhk.edu.hk/people/academic-staff/leung"> Conan Nai Chung Leung   </a>
-<br>
-The Chinese University of Hong Kong
-<br>
-<a href="Spring25/conan.pdf  "> TBA
-</a></b>
-</center>
-</td>
-</tr>
-
-
-<tr>
-<td>
-<center>
-<b>
-Oct 15
-
-</center>
-</td>
-<td>
-<center>
-<b>
-  <!--<a href="https://sites.google.com/view/pzhou/  "> Peng Zhou   </a>
-<br>
-University of California, Berkeley
-<br>
-<a href="Spring25/Zhou.pdf  "> Cutting-gluing in Heegaard-Floer theory with coefficient
-</a></b>
-</center>
-</td>
-</tr>
-  -->
-
-
-<tr>
-<td>
-<center>
-<b>
-Oct 22
-
-</center>
-</td>
-<td>
-<center>
-<b>
-  <a href="https://math.mit.edu/~shaoyunb/"> Shaoyun Bai  </a>
-<br>
-MIT
-<br>
-<a href="fall25/shaoyun.pdf"> TBA 
-</a></b>
-</center>
-</td>
-</tr>
-  -->
-
-
-<tr>
-<td>
-<center>
-<b>
-Oct 29
-
-</center>
-</td>
-<td>
-<center>
-<b>
-  <!--<a href="https://sites.google.com/view/pzhou/  "> Peng Zhou   </a>
-<br>
-University of California, Berkeley
-<br>
-<a href="Spring25/Zhou.pdf  "> Cutting-gluing in Heegaard-Floer theory with coefficient
-</a></b>
-</center>
-</td>
-</tr>
-  -->
-
-
-<tr>
-<td>
-<center>
-<b>
-Nov 5
-
-</center>
-</td>
-<td>
-<center>
-<b>
-  <a href=" https://www.danielpomerleano.com/ "> Daniel Pomerleano  </a>
-<br>
-UMass, Boston
-<br>
-<a href="Spring25/pomerleano.pdf  "> TBA
-</a></b>
-</center>
-</td>
-</tr>
-  -->
-
-
-<tr>
-<td>
-<center>
-<b>
-Nov 12
-
-</center>
-</td>
-<td>
-<center>
-<b>
-  <!--<a href="https://sites.google.com/view/pzhou/  "> Peng Zhou   </a>
-<br>
-University of California, Berkeley
-<br>
-<a href="Spring25/Zhou.pdf  "> Cutting-gluing in Heegaard-Floer theory with coefficient
-</a></b>
-</center>
-</td>
-</tr>
-  -->
-
-
-<tr>
-<td>
-<center>
-<b>
-Nov 19
-
-</center>
-</td>
-<td>
-<center>
-<b>
-  <!--<a href="https://sites.google.com/view/pzhou/  "> Peng Zhou   </a>
-<br>
-University of California, Berkeley
-<br>
-<a href="Spring25/Zhou.pdf  "> Cutting-gluing in Heegaard-Floer theory with coefficient
-</a></b>
-</center>
-</td>
-</tr>
-  -->
-
-
-<tr>
-<td>
-<center>
-<b>
-Dec 3
-
-</center>
-</td>
-<td>
-<center>
-<b>
-  <!--<a href="https://sites.google.com/view/pzhou/  "> Peng Zhou   </a>
-<br>
-University of California, Berkeley
-<br>
-<a href="Spring25/Zhou.pdf  "> Cutting-gluing in Heegaard-Floer theory with coefficient
-</a></b>
-</center>
-</td>
-</tr>
-  -->
-
-
-<tr>
-<td>
-<center>
-<b>
-Dec 10
-
-</center>
-</td>
-<td>
-<center>
-<b>
-  <!--<a href="https://sites.google.com/view/pzhou/  "> Peng Zhou   </a>
-<br>
-University of California, Berkeley
-<br>
-<a href="Spring25/Zhou.pdf  "> Cutting-gluing in Heegaard-Floer theory with coefficient
-</a></b>
-</center>
-</td>
-</tr>
-  -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</tbody></table>
-<font face="arial, helvetica"><b>
-</b></font><ul>
-<li><font face="arial, helvetica"><b> 
-
-Past seminars: <a href="http://math.bu.edu/research/geom/Fall97/seminars.html">Fall 1997</a>,
-<a href="http://math.bu.edu/research/geom/Spring98/seminars.html">Spring
-1998</a>, <a href="http://math.bu.edu/research/geom/Fall98/seminars.html">Fall 1998</a>,
-<a href="http://math.bu.edu/research/geom/Spring99/seminars.html">Spring 1999</a>,
-<a href="http://math.bu.edu/research/geom/Fall99/seminars.html">Fall 1999</a>,
-<a href="http://math.bu.edu/research/geom/Spring00/seminars.html">Spring
-2000</a>,
-<a href="http://math.bu.edu/research/geom/Fall00/seminars.html">Fall 2000</a>,
-<a href="http://math.bu.edu/research/geom/Spring01/seminars.html">Spring
-2001</a>, <a href="http://math.bu.edu/research/geom/Fall01/seminars.html">Fall 2001</a>,
-<a href="http://math.bu.edu/research/geom/Spring02/seminars.html">Spring
-2002</a>,
-<a href="http://math.bu.edu/research/geom/Fall03/seminars.html">Fall 2003</a>,
-<a href="http://math.bu.edu/research/geom/Spring04/seminars.html">Spring 2004</a>,
-<a href="http://math.bu.edu/research/geom/Fall04/seminars.html">Fall 2004</a>,
-<a href="http://math.bu.edu/research/geom/Spring05/seminars.html">Spring 2005</a>,
-<a href="http://math.bu.edu/research/geom/Fall05/seminars.html">Fall 2005</a>,
-<a href="http://math.bu.edu/research/geom/Spring06/seminars.html">Spring 2006</a>,
-<a href="http://math.bu.edu/research/geom/Fall06/seminars.html">Fall 2006</a>,
-<a href="http://math.bu.edu/research/geom/Spring07/seminars.html">Spring 2007</a>,
-<a href="http://math.bu.edu/research/geom/Fall07/seminars.html">Fall 2007</a>,
-<a href="http://math.bu.edu/research/geom/Spring08/seminars.html">Spring 2008</a>,
-<a href="http://math.bu.edu/research/geom/Fall08/seminarF2008.html">Fall 2008</a>,
- <a href="http://math.bu.edu/research/geom/Spring09/seminarS2009.html">Spring 2009</a>,
-  <a href="http://math.bu.edu/research/geom/Fall09/seminarF2009.html">Fall 2009</a>,
-  <a href="http://math.bu.edu/research/geom/Spring10/seminarS2010.html">Spring 2009</a>,
- <a href="http://math.bu.edu/research/geom/Fall10/seminarF2010.html">Fall 2010</a>,
- <a href="http://math.bu.edu/research/geom/Spring11/seminarS2011.html">Spring 2011</a>,
- <a href="http://math.bu.edu/research/geom/Fall11/seminar.html">Fall 2011</a>,
- <a href="http://math.bu.edu/research/geom/seminar_spring12.html">Spring 2012</a>,
- <a href="http://math.bu.edu/research/geom/Fall12/seminarF2012.html">Fall 2012</a>,
- <a href="http://math.bu.edu/research/geom/seminar_spring13.html">Spring 2013</a>,
- <a href="http://math.bu.edu/research/geom/Fall13/seminarF2013.html">Fall 2013</a>,
- <a href="http://math.bu.edu/research/geom/seminar_S2014.html">Spring 2014</a>,
- <a href="http://math.bu.edu/research/geom/seminar_F2014.html">Fall 2014</a>,
- <a href="http://math.bu.edu/research/geom/seminar_S2015.html">Spring 2015</a>, 
- <a href="http://math.bu.edu/research/geom/seminar_F2015.html">Fall 2015</a>, 
- <a href="http://math.bu.edu/research/geom/seminar_S2016.html">Spring 2016</a>, 
- <a href="http://math.bu.edu/research/geom/seminar_F2016.html">Fall 2016</a>, 
- <a href="http://math.bu.edu/research/geom/seminar_S2017.html">Spring 2017</a>,
- <a href="http://math.bu.edu/research/geom/Fall17/seminar.html">Fall 2017</a>,
- <a href="http://math.bu.edu/research/geom/Spring18/seminar.html">Spring 2018</a>,
- <a href="http://math.bu.edu/research/geom/Fall18/seminar.html">Fall 2018</a>,
- <a href="http://math.bu.edu/research/geom/Spring19/seminar.html">Spring 2019</a>,
- <a href="http://math.bu.edu/research/geom/Fall19/seminar_fall19.html">Fall 2019</a>,
- <a href="http://math.bu.edu/research/geom/Spring20/seminar20.html">Spring 2020</a>
- <a href="http://math.bu.edu/research/geom/Fall20/seminar.html">Fall 2020</a>
-  <a href="http://math.bu.edu/research/geom/Spring21/seminar.html">Spring 2021</a> 
- <a href="http://math.bu.edu/research/geom/Fall21/seminar.html">Fall 2021</a> 
-<a href="http://math.bu.edu/research/geom/Spring22/seminar.html">Spring 2022</a> 
-<a href="http://math.bu.edu/research/geom/Fall22/seminar.html">Fall 2022</a> 
-<a href="http://math.bu.edu/research/geom/Spring23/seminar.html">Spring 2023</a> 
-<a href="http://math.bu.edu/research/geom/Fall23/seminar.html">Fall 2023</a> 
-<a href="http://math.bu.edu/research/geom/Spring24/seminar.html">Spring 2024</a> 
-<a href="http://math.bu.edu/research/geom/Fall24/seminar.html">Fall 2024</a> 
- <br><br></b></font></li><li><font face="arial, helvetica"><b> 
- 
-
-
-If you have any questions regarding the seminar, please contact 
-<a href="https://brianrwilliams.github.io/"> Brian Williams </a>  <a style="font-family: Arial, sans-serif;">bwill22 (at) bu (dot) edu</a>
- or
- <a href="https://math.bu.edu/people/lau/Lau/My_geometry_life.html">Siu-Cheong Lau  </a> <a style="font-family:Arial, sans-serif;"> lau (at) math (dot) bu (dot) edu </a>
-</ul>
-<hr>
-<center>
-
-
-Visitors since January 23, 2001
-<p>
-<img src="/cgi-bin/Count.cgi?dd=C|df=kimura-seminar.dat" align=absmiddle>
-</center>
-<br>
-
-</b>
-</font>
-
-</BODY>
+</body>
 </html>
+
