@@ -12,7 +12,8 @@ body {
   text-align: center;
   background-color: #282828;      /* Dark background */
   color: #ebdbb2;                 /* Light foreground (beige) */
-  font-family: 'Inconsolata LGC Nerd Font', Consolas, 'Liberation Mono', Menlo, monospace, sans-serif;
+  font-family: 'Inconsolata LGC Nerd Font', monospace, monospace;
+  /* font-family: 'Inconsolata LGC Nerd Font', Consolas, 'Liberation Mono', Menlo, monospace, sans-serif;*/
 }
 
 a {
