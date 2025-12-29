@@ -1,55 +1,69 @@
 body{
- margin:50px 0px; 
- padding:0px;
- text-align:center;
+  margin:50px 0px; 
+  padding:0px;
+  text-align:center;
+  background: #282828;          /* dark background */
+  color: #ebdbb2;               /* light foreground */
 }
 #container{
- width:800px;
- margin: 0px auto;
- text-align:left;
- border:2px solid;
+  width:800px;
+  margin: 0px auto;
+  text-align:left;
+  border:2px solid #665c54;    /* dark gray/brown border */
+  background: #3c3836;          /* slightly lighter dark bg */
 }
 #header{
- text-align:center;
- border:0px solid;
- }
+  text-align:center;
+  border:0px solid;
+  color: #fabd2f;              /* bright yellow accent */
+}
 #menu{
- border-top: 3px solid;
- border-bottom:3px solid;
- padding:10px;
- text-align:center;
+  border-top: 3px solid #fe8019;    /* orange */
+  border-bottom:3px solid #fe8019;
+  padding:10px;
+  text-align:center;
+  background: #3c3836;
+  color: #fbf1c7;
 }
 #intro{
- padding:20px;
+  padding:20px;
+  color: #ebdbb2;
 }
 #talks{
 
 }
 table{
- border-collapse:collapse;
- table-layout:fixed;
+  border-collapse:collapse;
+  table-layout:fixed;
+  background: #282828;
+  color: #ebdbb2;
 }
 td{
- border: 1px solid;
- padding: 10px;
- spacing: 0px;
+  border: 1px solid #665c54;
+  padding: 10px;
+  spacing: 0px;
+  background: #3c3836;
 }
 h2{
- text-align:center;
+  text-align:center;
+  color: #fabd2f;
 }
 
 details > summary {
-	padding:5px;
+  padding:5px;
   list-style: none;
+  color: #b8bb26;              /* green accent */
 }
 details > summary::-webkit-details-marker {
   display: none;
 }
 
 summary{
-padding:20px;
+  padding:20px;
+  color: #fabd2f;
 }
 
 p {
   margin: 35px;
+  color: #ebdbb2;
 }
