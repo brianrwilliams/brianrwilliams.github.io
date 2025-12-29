@@ -37,11 +37,51 @@ a:hover, a:focus {
 }
 
 #header {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;       /* center content horizontally */
   border: 0;
   color: #fabd2f;                /* Bright yellow accent */
   margin-bottom: 10px;
+  font-family: 'Inconsolata LGC Nerd Font', monospace, monospace;
 }
+
+#header-text {
+  text-align: left;              /* left-align text for readability */
+  line-height: 1.5;
+  font-size: 1.1rem;
+}
+
+#header img {
+  max-height: 100px;
+  margin-left: 20px;
+  object-fit: contain;
+}
+
+/* Responsive: stack on narrow screens and center text */
+@media (max-width: 480px) {
+  #header {
+    flex-direction: column;
+    text-align: center;
+  }
+  #header-text {
+    margin-bottom: 12px;
+    text-align: center;
+  }
+  #header img {
+    margin-left: 0;
+    max-height: 80px;
+  }
+}
+
+/*
+#header {
+  text-align: center;
+  border: 0;
+  color: #fabd2f;                
+  margin-bottom: 10px;
+}
+*/
 
 #menu {
   border-top: 3px solid #fe8019;    /* Orange top border */
