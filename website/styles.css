@@ -1,69 +1,123 @@
-body{
-  margin:50px 0px; 
-  padding:0px;
-  text-align:center;
-  background: #282828;          /* dark background */
-  color: #ebdbb2;               /* light foreground */
+/* Gruvbox Dark Theme Core Colors */
+body {
+  margin: 50px 0px; 
+  padding: 0;
+  text-align: center;
+  background-color: #282828;      /* Dark background */
+  color: #ebdbb2;                 /* Light foreground (beige) */
+  font-family: sans-serif;
 }
-#container{
-  width:800px;
-  margin: 0px auto;
-  text-align:left;
-  border:2px solid #665c54;    /* dark gray/brown border */
-  background: #3c3836;          /* slightly lighter dark bg */
-}
-#header{
-  text-align:center;
-  border:0px solid;
-  color: #fabd2f;              /* bright yellow accent */
-}
-#menu{
-  border-top: 3px solid #fe8019;    /* orange */
-  border-bottom:3px solid #fe8019;
-  padding:10px;
-  text-align:center;
-  background: #3c3836;
-  color: #fbf1c7;
-}
-#intro{
-  padding:20px;
-  color: #ebdbb2;
-}
-#talks{
 
+a {
+  color: #fe8019;                 /* Orange accent for links */
+  text-decoration: none;
 }
-table{
-  border-collapse:collapse;
-  table-layout:fixed;
-  background: #282828;
+a:hover, a:focus {
+  color: #fabd2f;                 /* Bright yellow on hover */
+  text-decoration: underline;
+}
+
+#container {
+  width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  border: 2px solid #665c54;     /* Dark gray/brown border */
+  background-color: #3c3836;     /* Medium dark bg */
+  padding: 20px;
+  border-radius: 4px;
+}
+
+#header {
+  text-align: center;
+  border: 0;
+  color: #fabd2f;                /* Bright yellow accent */
+  margin-bottom: 10px;
+}
+
+#menu {
+  border-top: 3px solid #fe8019;    /* Orange top border */
+  border-bottom: 3px solid #fe8019; /* Orange bottom border */
+  padding: 10px;
+  text-align: center;
+  background-color: #3c3836;
+  color: #fbf1c7;
+  margin-bottom: 20px;
+}
+
+#intro {
+  padding: 20px;
   color: #ebdbb2;
 }
-td{
+
+#talks {
+  /* No additional styles */
+}
+
+table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  background-color: #282828;
+  color: #ebdbb2;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+td {
   border: 1px solid #665c54;
   padding: 10px;
-  spacing: 0px;
-  background: #3c3836;
+  vertical-align: top;
+  background-color: #3c3836;
 }
-h2{
-  text-align:center;
+
+h2 {
+  text-align: center;
   color: #fabd2f;
+  margin-top: 0;
 }
 
 details > summary {
-  padding:5px;
+  padding: 5px;
   list-style: none;
-  color: #b8bb26;              /* green accent */
+  color: #b8bb26; /* Green accent */
+  cursor: pointer;
 }
 details > summary::-webkit-details-marker {
   display: none;
 }
 
-summary{
-  padding:20px;
+summary {
+  padding: 20px;
   color: #fabd2f;
 }
 
 p {
   margin: 35px;
   color: #ebdbb2;
+}
+
+/* Scrollbar styling for modern browsers */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #665c54;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #fabd2f;
+}
+
+/* Optional: Style buttons or inputs with Gruvbox colors */
+button, input[type="button"], input[type="submit"] {
+  background-color: #665c54;
+  color: #ebdbb2;
+  border: 1px solid #fabd2f;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+button:hover, input[type="button"]:hover, input[type="submit"]:hover {
+  background-color: #fabd2f;
+  color: #282828;
 }
