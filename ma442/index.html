@@ -177,100 +177,64 @@ This is an honors level course in linear algebra. A syllabus can be found <a hre
 </body>
 
 <style>
-  table {
-    border-collapse: collapse;
-    margin: 20px auto;
+  body {
+    background-color: #282828;
+    color: #ebdbb2;
+    font-family: 'Inconsolata LGC Nerd Font', monospace, monospace;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
   }
-  td {
-    width: 20px;
-    height: 20px;
-    border: 1px solid #ddd;
+  svg {
+    background: #3c3836;
+    border: 2px solid #665c54;
+    border-radius: 8px;
+    max-width: 600px;
+    max-height: 400px;
   }
-  .grid-cell {
-    background-color: white;
-  }
-  .vector-u {
-    background-color: #1f77b4; /* Blue: Vector u */
-  }
-  .vector-v {
-    background-color: #ff7f0e; /* Orange: Vector v */
-  }
-  .projection {
-    background-color: #2ca02c; /* Green: Projection of v onto u */
-  }
-  .origin {
-    background-color: #000;  /* Black: origin */
+  text {
+    font-size: 18px;
+    font-weight: 700;
+    fill: #ebdbb2;
   }
 </style>
 </head>
 <body>
 
-<h3 style="text-align:center; font-family: sans-serif;">Vector Projection (low-res grid)</h3>
+<svg viewBox="0 0 500 350" xmlns="http://www.w3.org/2000/svg" aria-labelledby="title desc" role="img">
+  <title>Vector Projection Illustration</title>
+  <desc>A schematic showing vector projection of vector v onto u</desc>
 
-<table>
-  <!-- 7 rows, 9 columns grid -->
-  <tbody>
-    <!-- rows numbered from top to bottom -->
-    <!-- We define cells by their row,col position for easier visualization -->
-    <!-- Origin is at center cell (row 4, col 5) -->
-    
-    <!-- Row 1 -->
-    <tr>
-      <td class="grid-cell"></td><td class="grid-cell"></td><td class="grid-cell"></td>
-      <td class="grid-cell"></td><td class="grid-cell"></td><td class="grid-cell"></td>
-      <td class="grid-cell"></td><td class="grid-cell"></td><td class="grid-cell"></td>
-    </tr>
-    
-    <!-- Row 2 -->
-    <tr>
-      <td class="grid-cell"></td><td class="grid-cell"></td><td class="grid-cell"></td>
-      <td class="grid-cell"></td><td class="vector-u"></td>
-      <td class="grid-cell"></td><td class="grid-cell"></td><td class="grid-cell"></td><td class="grid-cell"></td>
-    </tr>
-    
-    <!-- Row 3 -->
-    <tr>
-      <td class="grid-cell"></td><td class="grid-cell"></td><td class="grid-cell"></td>
-      <td class="vector-u"></td><td class="grid-cell"></td><td class="grid-cell"></td>
-      <td class="grid-cell"></td><td class="grid-cell"></td><td class="grid-cell"></td>
-    </tr>
-    
-    <!-- Row 4 -->
-    <tr>
-      <td class="grid-cell"></td><td class="grid-cell"></td><td class="vector-v"></td>
-      <td class="grid-cell"></td><td class="origin"></td><td class="projection"></td>
-      <td class="grid-cell"></td><td class="grid-cell"></td><td class="grid-cell"></td>
-    </tr>
-    
-    <!-- Row 5 -->
-    <tr>
-      <td class="grid-cell"></td><td class="grid-cell"></td><td class="grid-cell"></td>
-      <td class="vector-v"></td><td class="grid-cell"></td><td class="projection"></td>
-      <td class="grid-cell"></td><td class="grid-cell"></td><td class="grid-cell"></td>
-    </tr>
-    
-    <!-- Row 6 -->
-    <tr>
-      <td class="grid-cell"></td><td class="grid-cell"></td><td class="grid-cell"></td>
-      <td class="grid-cell"></td><td class="grid-cell"></td>
-      <td class="projection"></td><td class="grid-cell"></td><td class="grid-cell"></td><td class="grid-cell"></td>
-    </tr>
-    
-    <!-- Row 7 -->
-    <tr>
-      <td class="grid-cell"></td><td class="grid-cell"></td><td class="grid-cell"></td>
-      <td class="grid-cell"></td><td class="grid-cell"></td><td class="grid-cell"></td>
-      <td class="grid-cell"></td><td class="grid-cell"></td><td class="grid-cell"></td>
-    </tr>
-  </tbody>
-</table>
+  <!-- Axes -->
+  <line x1="50" y1="300" x2="450" y2="300" stroke="#bdae93" stroke-width="2"/>
+  <line x1="50" y1="300" x2="50" y2="50" stroke="#bdae93" stroke-width="2"/>
+  
+  <!-- Arrowheads for axes -->
+  <polygon points="450,295 460,300 450,305" fill="#bdae93"/>
+  <polygon points="45,50 50,40 55,50" fill="#bdae93"/>
 
-<p style="max-width:400px; margin: 0 auto; font-family: sans-serif; text-align:center;">
-Blue cells (Vector <code>u</code>) show a base vector.<br>
-Orange cells (Vector <code>v</code>) show the vector to project.<br>
-Green cells show the projection of <code>v</code> onto <code>u</code>.<br>
-Black cell is the origin.
-</p>
+  <!-- Vector u (blue) -->
+  <line x1="50" y1="300" x2="350" y2="130" stroke="#1f77b4" stroke-width="6" marker-end="url(#arrowBlue)"/>
+  <text x="360" y="120" fill="#1f77b4">u</text>
+
+  <!-- Vector v (orange) -->
+  <line x1="50" y1="300" x2="200" y2="50" stroke="#ff7f0e" stroke-width="6" marker-end="url(#arrowOrange)"/>
+  <text x="210" y="40" fill="#ff7f0e">v</text>
+
+  <!-- Vector projection (green) -->
+  <line x1="50" y1="300" x2="270" y2="190" stroke="#2ca02c" stroke-width="6" marker-end="url(#arrowGreen)"/>
+  <text x="280" y="200" fill="#2ca02c">proj<sub>u</sub>(v)</text>
+
+  <!-- Perpendicular line from tip of v to u -->
+  <line x1="270" y1="190" x2="200" y2="50" stroke="#b8bb26" stroke-width="2" stroke-dasharray="6 4"/>
+  
+  <!-- Right angle box -->
+  <rect x="260" y="180" width="15" height="15" fill="#b8bb26" transform="rotate(42, 260, 180)"/>
+
+  <!-- Origin label -->
+  <circle cx="50" cy="300" r="6" fill="#ebdbb2" />
+  <text x="30" y="320" fill="#ebdbb2">0</text>
+</svg>
 
 </body>
 </html>
