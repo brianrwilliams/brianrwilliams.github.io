@@ -53,9 +53,56 @@ a:hover, a:focus {
 }
 
 #intro {
+  background-color: #3c3836;       /* Medium dark background */
+  border: 2px solid #665c54;       /* Gruvbox border color */
+  padding: 20px;
+  max-width: 900px;
+  margin: 1.5em auto;
+  font-family: 'Inconsolata LGC Nerd Font', monospace, monospace;
+  color: #ebdbb2;                  /* Light beige text */
+}
+
+#intro ul {
+  list-style-type: disc;
+  padding-left: 2em;
+}
+
+#intro li {
+  margin-bottom: 1em;
+  line-height: 1.5;
+}
+
+#intro a {
+  color: #72875b;                  /* Muted forest green */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+#intro a:hover,
+#intro a:focus {
+  color: #b8bb26;                  /* Bright Gruvbox green on hover */
+  text-decoration: underline;
+}
+
+#intro li a:first-child {
+  font-weight: 700;                /* Make first link in each li stand out */
+}
+
+#intro ul li li {
+  list-style-type: circle;         /* If nesting needed later */
+}
+
+@media (max-width: 600px) {
+  #intro {
+    padding: 15px 10px;
+    margin: 1em 10px;
+  }
+}
+
+/*#intro {
   padding: 20px;
   color: #ebdbb2;
-}
+}*/
 
 #talks {
   /* No additional styles */
