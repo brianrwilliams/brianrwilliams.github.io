@@ -182,3 +182,33 @@ button:hover, input[type="button"]:hover, input[type="submit"]:hover {
 b {
   color: #b8bb26;
 }
+
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px 30px;
+  max-width: 850px;
+  margin: 0 auto;
+  font-family: 'Inconsolata LGC Nerd Font', monospace;
+  color: #ebdbb2; /* light text */
+}
+
+.schedule-grid div {
+  background: #3c3836;
+  border: 1.5px solid #665c54;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.schedule-grid a {
+  color: #72875b;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.schedule-grid a:hover,
+.schedule-grid a:focus {
+  color: #b8bb26;
+  text-decoration: underline;
+}
