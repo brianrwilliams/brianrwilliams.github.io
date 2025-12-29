@@ -183,6 +183,8 @@ b {
   color: #b8bb26;
 }
 
+/*schedule for classes*/ 
+
 .schedule-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -213,48 +215,65 @@ b {
   text-decoration: underline;
 }
 
+/*quizzes for classes*/ 
+
 .quiz-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 10px 25px;
+    grid-template-columns: 1fr;
+    gap: 14px 0;
   }
 
-  .quiz-grid div {
+  /* Each quiz item is a flex container: date left, links stacked right */
+  .quiz-item {
+    display: flex;
+    align-items: center;
     background-color: #3c3836;
     border: 1.5px solid #665c54;
-    padding: 10px 15px;
     border-radius: 6px;
-    font-size: 0.95rem;
-    line-height: 1.4;
+    padding: 10px 15px;
     color: #ebdbb2;
+    font-size: 0.95rem;
   }
 
-  .quiz-grid a {
+  /* Date on the left, fixed width, vertically centered */
+  .quiz-date {
+    flex: 0 0 110px;
+    font-weight: 700;
+    color: #fabd2f;
+    user-select: none;
+  }
+
+  /* Links container stacked vertically */
+  .quiz-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .quiz-links a {
     color: #72875b; /* Muted forest green */
     font-weight: 600;
     text-decoration: none;
-    margin-left: 6px;
     transition: color 0.3s ease;
   }
 
-  .quiz-grid a:hover,
-  .quiz-grid a:focus {
+  .quiz-links a:hover,
+  .quiz-links a:focus {
     color: #b8bb26; /* Bright Gruvbox green */
     text-decoration: underline;
   }
 
-  /* Optional: Bold the date */
-  .quiz-grid div::before {
-    content: attr(data-date);
-    font-weight: 700;
-    margin-right: 8px;
+  @media (min-width: 480px) {
+    /* Make quiz grid multicolumn on wider screens */
+    .quiz-grid {
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 14px 25px;
+    }
   }
 
-  @media (max-width: 480px) {
-    .quiz-grid {
-      grid-template-columns: 1fr;
-    }
+  @media (max-width: 479px) {
     body {
       margin: 20px 10px;
     }
   }
+
