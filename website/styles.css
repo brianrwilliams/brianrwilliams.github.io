@@ -86,7 +86,7 @@ h2 {
 details > summary {
   padding: 5px;
   list-style: none;
-  color: #b8bb26; /* Green accent */
+  color: #ebdbb2; /*beige*/
   cursor: pointer;
 }
 details > summary::-webkit-details-marker {
@@ -128,4 +128,9 @@ button, input[type="button"], input[type="submit"] {
 button:hover, input[type="button"]:hover, input[type="submit"]:hover {
   background-color: #fabd2f;
   color: #282828;
+}
+
+/* Make all <b> text green (#b8bb26) */
+b {
+  color: #b8bb26;
 }
