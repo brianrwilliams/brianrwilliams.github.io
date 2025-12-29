@@ -217,33 +217,35 @@ b {
 
 /*quizzes for classes*/ 
 
-.quiz-grid {
+/* Grid container for quiz entries */
+  .quiz-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 14px 0;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 16px 24px;
   }
 
-  /* Each quiz item is a flex container: date left, links stacked right */
+  /* Each quiz entry is a grid with two columns */
   .quiz-item {
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    column-gap: 20px;
     background-color: #3c3836;
     border: 1.5px solid #665c54;
     border-radius: 6px;
-    padding: 10px 15px;
-    color: #ebdbb2;
+    padding: 15px 20px;
+    align-items: center; /* vertical center the two columns */
     font-size: 0.95rem;
+    color: #ebdbb2;
   }
 
-  /* Date on the left, fixed width, vertically centered */
+  /* Date on left */
   .quiz-date {
-    flex: 0 0 110px;
     font-weight: 700;
     color: #fabd2f;
     user-select: none;
   }
 
-  /* Links container stacked vertically */
+  /* Links on right stacked vertically */
   .quiz-links {
     display: flex;
     flex-direction: column;
@@ -251,29 +253,29 @@ b {
   }
 
   .quiz-links a {
-    color: #72875b; /* Muted forest green */
+    color: #72875b; /* muted forest green */
     font-weight: 600;
     text-decoration: none;
     transition: color 0.3s ease;
   }
-
   .quiz-links a:hover,
   .quiz-links a:focus {
-    color: #b8bb26; /* Bright Gruvbox green */
+    color: #b8bb26; /* bright Gruvbox green */
     text-decoration: underline;
   }
 
-  @media (min-width: 480px) {
-    /* Make quiz grid multicolumn on wider screens */
+  /* Responsive tweaks */
+  @media (max-width: 480px) {
     .quiz-grid {
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 14px 25px;
+      grid-template-columns: 1fr;
     }
-  }
-
-  @media (max-width: 479px) {
     body {
       margin: 20px 10px;
+    }
+    .quiz-item {
+      grid-template-columns: 70px 1fr;
+      padding: 12px 15px;
+      font-size: 0.9rem;
     }
   }
 
