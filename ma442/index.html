@@ -175,3 +175,102 @@ This is an honors level course in linear algebra. A syllabus can be found <a hre
 </div>
 
 </body>
+
+<style>
+  table {
+    border-collapse: collapse;
+    margin: 20px auto;
+  }
+  td {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ddd;
+  }
+  .grid-cell {
+    background-color: white;
+  }
+  .vector-u {
+    background-color: #1f77b4; /* Blue: Vector u */
+  }
+  .vector-v {
+    background-color: #ff7f0e; /* Orange: Vector v */
+  }
+  .projection {
+    background-color: #2ca02c; /* Green: Projection of v onto u */
+  }
+  .origin {
+    background-color: #000;  /* Black: origin */
+  }
+</style>
+</head>
+<body>
+
+<h3 style="text-align:center; font-family: sans-serif;">Vector Projection (low-res grid)</h3>
+
+<table>
+  <!-- 7 rows, 9 columns grid -->
+  <tbody>
+    <!-- rows numbered from top to bottom -->
+    <!-- We define cells by their row,col position for easier visualization -->
+    <!-- Origin is at center cell (row 4, col 5) -->
+    
+    <!-- Row 1 -->
+    <tr>
+      <td class="grid-cell"></td><td class="grid-cell"></td><td class="grid-cell"></td>
+      <td class="grid-cell"></td><td class="grid-cell"></td><td class="grid-cell"></td>
+      <td class="grid-cell"></td><td class="grid-cell"></td><td class="grid-cell"></td>
+    </tr>
+    
+    <!-- Row 2 -->
+    <tr>
+      <td class="grid-cell"></td><td class="grid-cell"></td><td class="grid-cell"></td>
+      <td class="grid-cell"></td><td class="vector-u"></td>
+      <td class="grid-cell"></td><td class="grid-cell"></td><td class="grid-cell"></td><td class="grid-cell"></td>
+    </tr>
+    
+    <!-- Row 3 -->
+    <tr>
+      <td class="grid-cell"></td><td class="grid-cell"></td><td class="grid-cell"></td>
+      <td class="vector-u"></td><td class="grid-cell"></td><td class="grid-cell"></td>
+      <td class="grid-cell"></td><td class="grid-cell"></td><td class="grid-cell"></td>
+    </tr>
+    
+    <!-- Row 4 -->
+    <tr>
+      <td class="grid-cell"></td><td class="grid-cell"></td><td class="vector-v"></td>
+      <td class="grid-cell"></td><td class="origin"></td><td class="projection"></td>
+      <td class="grid-cell"></td><td class="grid-cell"></td><td class="grid-cell"></td>
+    </tr>
+    
+    <!-- Row 5 -->
+    <tr>
+      <td class="grid-cell"></td><td class="grid-cell"></td><td class="grid-cell"></td>
+      <td class="vector-v"></td><td class="grid-cell"></td><td class="projection"></td>
+      <td class="grid-cell"></td><td class="grid-cell"></td><td class="grid-cell"></td>
+    </tr>
+    
+    <!-- Row 6 -->
+    <tr>
+      <td class="grid-cell"></td><td class="grid-cell"></td><td class="grid-cell"></td>
+      <td class="grid-cell"></td><td class="grid-cell"></td>
+      <td class="projection"></td><td class="grid-cell"></td><td class="grid-cell"></td><td class="grid-cell"></td>
+    </tr>
+    
+    <!-- Row 7 -->
+    <tr>
+      <td class="grid-cell"></td><td class="grid-cell"></td><td class="grid-cell"></td>
+      <td class="grid-cell"></td><td class="grid-cell"></td><td class="grid-cell"></td>
+      <td class="grid-cell"></td><td class="grid-cell"></td><td class="grid-cell"></td>
+    </tr>
+  </tbody>
+</table>
+
+<p style="max-width:400px; margin: 0 auto; font-family: sans-serif; text-align:center;">
+Blue cells (Vector <code>u</code>) show a base vector.<br>
+Orange cells (Vector <code>v</code>) show the vector to project.<br>
+Green cells show the projection of <code>v</code> onto <code>u</code>.<br>
+Black cell is the origin.
+</p>
+
+</body>
+</html>
