@@ -212,3 +212,49 @@ b {
   color: #b8bb26;
   text-decoration: underline;
 }
+
+.quiz-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 10px 25px;
+  }
+
+  .quiz-grid div {
+    background-color: #3c3836;
+    border: 1.5px solid #665c54;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: #ebdbb2;
+  }
+
+  .quiz-grid a {
+    color: #72875b; /* Muted forest green */
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 6px;
+    transition: color 0.3s ease;
+  }
+
+  .quiz-grid a:hover,
+  .quiz-grid a:focus {
+    color: #b8bb26; /* Bright Gruvbox green */
+    text-decoration: underline;
+  }
+
+  /* Optional: Bold the date */
+  .quiz-grid div::before {
+    content: attr(data-date);
+    font-weight: 700;
+    margin-right: 8px;
+  }
+
+  @media (max-width: 480px) {
+    .quiz-grid {
+      grid-template-columns: 1fr;
+    }
+    body {
+      margin: 20px 10px;
+    }
+  }
