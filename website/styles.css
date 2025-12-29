@@ -1,22 +1,30 @@
-/* Gruvbox Dark Theme Core Colors */
+@font-face {
+  font-family: 'Inconsolata LGC Nerd Font';
+  src: local('Inconsolata LGC Nerd Font'),
+       url('path/to/InconsolataLGCNerdFont.woff2') format('woff2'),
+       url('path/to/InconsolataLGCNerdFont.woff') format('woff');
+  /* Replace the urls above with the correct path to the font files or remove if installed locally */
+}
+
 body {
   margin: 50px 0px; 
   padding: 0;
   text-align: center;
   background-color: #282828;      /* Dark background */
   color: #ebdbb2;                 /* Light foreground (beige) */
-  font-family: sans-serif;
+  font-family: 'Inconsolata LGC Nerd Font', Consolas, 'Liberation Mono', Menlo, monospace, sans-serif;
 }
 
 a {
-  color: #fe8019;                 /* Orange accent for links */
+  color: #72875b;                 /* Muted forest green */
   text-decoration: none;
 }
 a:hover, a:focus {
-  color: #fabd2f;                 /* Bright yellow on hover */
+  color: #a2b284;                 /* Lighter green on hover */
   text-decoration: underline;
 }
 
+/* rest remains unchanged */
 #container {
   width: 800px;
   margin: 0 auto;
