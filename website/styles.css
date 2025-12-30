@@ -58,11 +58,17 @@ a:hover, a:focus {
   object-fit: contain;
 }
 
-#header h2, #header h3 {
-  margin-top: 0;
-  margin-bottom: 0.2em;
-  text-align: center;
-  color: #fabd2f; /* bright yellow accent */
+
+#header h2,
+#header h3 {
+  display: block !important;  /* force block-level */
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  line-height: 1.2;           /* tighten line height */
+}
+
+#header h2 {
+  margin-bottom: 0.2em !important; /* small gap after h2 */
 }
 
 #header h3 {
