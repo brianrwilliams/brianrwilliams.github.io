@@ -320,3 +320,37 @@ b {
     }
   }
 
+.header-with-image {
+  display: flex;
+  align-items: center;
+  max-width: 700px;      /* optional max width */
+  margin: 20px auto;     /* center and vertical spacing */
+  font-family: 'Inconsolata LGC Nerd Font', monospace, monospace;
+  color: #fabd2f;        /* example text color */
+}
+
+.header-with-image #header-text {
+  flex: 1;               /* let text take available space */
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.header-with-image img {
+  max-height: 130px;     /* image height matches text height approx */
+  margin-left: 20px;
+  object-fit: contain;
+  /* Add border-radius or border if you want */
+}
+
+/* Responsive: stack vertically on narrow screens */
+@media (max-width: 480px) {
+  .header-with-image {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .header-with-image img {
+    margin: 15px 0 0 0;
+    max-height: 100px;
+    width: auto;
+  }
+}
