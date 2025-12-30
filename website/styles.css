@@ -58,25 +58,8 @@ a:hover, a:focus {
   object-fit: contain;
 }
 
-
-#header h2,
-#header h3 {
-  display: block !important;  /* force block-level */
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-  line-height: 1.2;           /* tighten line height */
-}
-
-#header h2 {
-  margin-bottom: 0.2em !important; /* small gap after h2 */
-}
-
-#header h3 {
-  margin-bottom: 0; /* remove bottom margin on h3 */
-}
-
 /* Responsive: stack on narrow screens and center text */
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
   #header {
     flex-direction: column;
     text-align: center;
@@ -90,7 +73,7 @@ a:hover, a:focus {
     max-height: 80px;
   }
 }
-
+*/ 
 /*
 #header {
   text-align: center;
