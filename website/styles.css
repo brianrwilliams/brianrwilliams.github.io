@@ -38,6 +38,7 @@ a:hover, a:focus {
 
 #header {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;       /* center content horizontally */
   border: 0;
