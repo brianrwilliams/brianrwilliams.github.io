@@ -336,12 +336,14 @@ b {
 }
 
 .header-with-image img {
-  max-height: 130px;     /* image height matches text height approx */
+  max-height: 100px;      /* reduce this */
+  max-width: 100px;       /* optionally limit width */
+  width: auto;            /* keep aspect ratio */
   margin-left: 20px;
   object-fit: contain;
-  /* Add border-radius or border if you want */
+  border-radius: 4px;     /* optional, softer corners */
+  display: block;         /* remove inline spacing artifacts */
 }
-
 /* Responsive: stack vertically on narrow screens */
 @media (max-width: 480px) {
   .header-with-image {
