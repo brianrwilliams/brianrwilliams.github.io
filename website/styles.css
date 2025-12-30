@@ -58,6 +58,17 @@ a:hover, a:focus {
   object-fit: contain;
 }
 
+#header h2, #header h3 {
+  margin-top: 0;
+  margin-bottom: 0.2em;
+  text-align: center;
+  color: #fabd2f; /* bright yellow accent */
+}
+
+#header h3 {
+  margin-bottom: 0; /* remove bottom margin on h3 */
+}
+
 /* Responsive: stack on narrow screens and center text */
 @media (max-width: 480px) {
   #header {
