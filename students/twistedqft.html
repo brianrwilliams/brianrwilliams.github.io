@@ -3,52 +3,159 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Twisted QFT Seminar</title>
+<title>Twisted QFT Seminar - Lectures</title>
 <link href="../../website/styles.css" type="text/css" rel="stylesheet" />
 <style>
-  /* Minimal additions */
-  #header h2 {
-    margin-bottom: 0.3em;
+  /* Basic styling aligned with your theme */
+  #container {
+    max-width: 850px;
+    margin: 0 auto;
+    font-family: 'Inconsolata LGC Nerd Font', monospace, monospace;
+    color: #ebdbb2;
   }
-  #header h3 {
-    margin-top: 0;
+  #header {
+    text-align: center;
+    color: #fabd2f;
     margin-bottom: 1em;
   }
-  #intro p {
-    max-width: 700px;
-    margin: 1em auto;
-    line-height: 1.5;
+  h4 {
+    border-bottom: 1px solid #665c54;
+    padding-bottom: 0.2em;
+    margin-top: 2em;
   }
-  #intro a {
+  .lecture {
+    background-color: #3c3836;
+    border: 1px solid #665c54;
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin-bottom: 1.2em;
+  }
+  .lecture-title {
+    font-weight: 700;
     color: #fabd2f;
-    text-decoration: none;
+    margin-bottom: 0.3em;
   }
-  #intro a:hover {
+  .lecture-desc {
+    margin-bottom: 0.6em;
+    line-height: 1.4;
+  }
+  .links a {
+    color: #72875b;
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 1.2em;
+  }
+  .links a:hover,
+  .links a:focus {
+    color: #b8bb26;
     text-decoration: underline;
   }
-  /* You can adjust tables, iframes, ul, etc., as needed */
 </style>
 </head>
 <body>
-
 <div id="container">
 
-  <div id="header" style="text-align:center;">
-    <h2>Twisted QFT</h2>
+  <div id="header">
+    <h2>Twisted QFT Seminar</h2>
     <h3>Spring 2021</h3>
   </div>
 
   <div id="intro">
     <p><em>This series ran in Spring 2021. For current information on the future of the seminar please email me!</em></p>
-    <p>The goal of this lecture series is to examine twists of quantum field theories in low dimensions, focusing on algebraic and homological aspects and the relation between the Batalin-Vilkovisky formalism and more traditional physical approaches (SUSY, superspace, and such). Some beautiful old things and some exciting new things.</p>
-    <p>The series is organized by <a href="https://www.maths.ed.ac.uk/school-of-mathematics/people/a-z?person=850" target="_blank" rel="noopener">Tudor Dimofte</a> and <a href="/view/brianrwilliams/home">Brian Williams</a>. Weekly emails are sent with zoom links and announcements. Contact either for the mailing list.</p>
-    <p>Slides and videos from the lectures will be posted here. Partial <a href="https://drive.google.com/file/d/16hlqywdgLKUjdST7QgnRvT4lX9VU-nuk/view?usp=sharing" target="_blank" rel="noopener">notes</a> (by Brian) will be periodically updated. For supplementary material, see this <a href="https://sites.google.com/view/physical-mathematics-of-qfts/bv-formalism?authuser=0" target="_blank" rel="noopener">lecture series</a> on twists of supersymmetric Yang–Mills in the BV formalism.</p>
-    <p>Also, here are some <a href="https://drive.google.com/file/d/1So7CvDCQXwPNzSioPb0pL6Eze83EPXJE/view?usp=sharing" target="_blank" rel="noopener">problem sets</a> accompanying the lectures (Problem Set 1 covers weeks 2 and 3).</p>
+    <p>The goal of this lecture series is to examine twists of quantum field theories in low dimensions, focusing on algebraic and homological aspects and the relation between the Batalin-Vilkovisky formalism and more traditional physical approaches (SUSY, superspace, etc.). Some beautiful old things and some exciting new things.</p>
+    <p>The series is organized by <a href="https://www.maths.ed.ac.uk/school-of-mathematics/people/a-z?person=850" target="_blank" rel="noopener">Tudor Dimofte</a> and <a href="/view/brianrwilliams/home">Brian Williams</a>. Weekly emails with zoom links are sent; contact either to be added.</p>
   </div>
 
-  <!-- You can add structured lecture/links schedule and resources here as desired -->
-  
-</div>
+  <h4>Lecture Schedule</h4>
 
-</body>
+  <div class="lecture">
+    <div class="lecture-title">Week 1: Introduction</div>
+    <div class="lecture-desc">Zero-dimensional path integrals. Gaussian integrals, the finite dimensional BV formalism, 0d bosons.</div>
+    <div class="links">
+      <a href="https://media.ed.ac.uk/media/TwistedQFT+Week+1/1_3mws6tpp" target="_blank" rel="noopener">Video</a>
+      <a href="https://drive.google.com/file/d/1IpX8UzIPDTMD4Str6E8A6EvVGXvcoh32/view?usp=sharing" target="_blank" rel="noopener">TD Slides</a>
+      <a href="https://drive.google.com/file/d/1MS_9yddNjPA8t2CSFBeq9Q86HisWBiMt/view?usp=sharing" target="_blank" rel="noopener">BW Slides</a>
+    </div>
+  </div>
+
+  <div class="lecture">
+    <div class="lecture-title">Week 2: Fun with gradings and fermions</div>
+    <div class="lecture-desc">The 0d BV formalism.</div>
+    <div class="links">
+      <a href="https://media.ed.ac.uk/media/TwistedQFT+Week+2/1_7udhmhwb" target="_blank" rel="noopener">Video</a>
+      <a href="https://drive.google.com/file/d/1Uj669xnHYcxfZRU4njFJ0lYzWQRVeTH3/view?usp=sharing" target="_blank" rel="noopener">TD Slides</a>
+      <a href="https://drive.google.com/file/d/1_LmZ7Q3S5sxNSiFx_IgdMozNoPc2UCRN/view?usp=sharing" target="_blank" rel="noopener">BW Slides</a>
+    </div>
+  </div>
+
+  <div class="lecture">
+    <div class="lecture-title">Week 3: BV integration and gauge theory</div>
+    <div class="lecture-desc">Localization in 0d SUSY.</div>
+    <div class="links">
+      <a href="https://media.ed.ac.uk/media/GMT20210219-150326_TwistedQFT_1442x810.mp4/1_1dr8v4rj" target="_blank" rel="noopener">Video</a>
+      <a href="https://drive.google.com/file/d/1WMjaLbE4PaZhgCppDnQFELEq_HXTOxOJ/view?usp=sharing" target="_blank" rel="noopener">TD Slides</a>
+      <a href="https://drive.google.com/file/d/1oHs9mzLOnZOC82DmE9WXwUyuOls6f6eh/view?usp=sharing" target="_blank" rel="noopener">BW Slides</a>
+    </div>
+  </div>
+
+  <div class="lecture">
+    <div class="lecture-title">Week 4: 0d N=2 supersymmetry in superspace</div>
+    <div class="lecture-desc">Symmetries in the BV formalism.</div>
+    <div class="links">
+      <a href="https://media.ed.ac.uk/media/Twisted+QFT+Week+4/1_i3l6inyy" target="_blank" rel="noopener">Video</a>
+      <a href="https://drive.google.com/file/d/1lDJukEOpJpKEt1Gkp65bqYvvZ2xHTANC/view?usp=sharing" target="_blank" rel="noopener">TD Slides</a>
+      <a href="https://drive.google.com/file/d/1IZxIRr_iFIudQ8nhbmFCUO_nBDM5dAr_/view?usp=sharing" target="_blank" rel="noopener">BW Slides</a>
+    </div>
+  </div>
+
+  <div class="lecture">
+    <div class="lecture-title">Week 5: Introduction to (classical) mechanics</div>
+    <div class="lecture-desc">One-dimensional field theory.</div>
+    <div class="links">
+      <a href="https://media.ed.ac.uk/media/Twisted+QFT+Week+5/1_t6ed9w4e" target="_blank" rel="noopener">Video</a>
+      <a href="https://drive.google.com/file/d/1HnLl48louuRWhXQlBr7r3CzoMsu_0OaT/view?usp=sharing" target="_blank" rel="noopener">TD Slides</a>
+      <a href="https://drive.google.com/file/d/12-EySRikZbg6V__ZLdO2kt4hds0TzyBm/view?usp=sharing" target="_blank" rel="noopener">BW Slides</a>
+    </div>
+  </div>
+
+  <div class="lecture">
+    <div class="lecture-title">Week 6: Quantum mechanics and the Weyl algebra</div>
+    <div class="lecture-desc">Introducing (quantum) local operators and factorization algebras.</div>
+    <div class="links">
+      <a href="https://media.ed.ac.uk/media/Twisted+QFT+Week+6/1_z7hhj5ry" target="_blank" rel="noopener">Video</a>
+      <a href="https://drive.google.com/file/d/1kvaSRsWpTilbbQoudRwQDR_WIl9_1J9f/view?usp=sharing" target="_blank" rel="noopener">TD Slides</a>
+      <a href="https://drive.google.com/file/d/1oHs9mzLOnZOC82DmE9WXwUyuOls6f6eh/view?usp=sharing" target="_blank" rel="noopener">BW Slides</a>
+    </div>
+  </div>
+
+  <div class="lecture">
+    <div class="lecture-title">Week 7: Quantum mechanics and the Weyl algebra, part II</div>
+    <div class="lecture-desc">Circle partition function.</div>
+    <div class="links">
+      <a href="https://media.ed.ac.uk/media/Twisted+QFT+Week+7/1_5hqfxjgu" target="_blank" rel="noopener">Video</a>
+      <a href="https://drive.google.com/file/d/1fAvlQ5H5y6H6ZsT8z9aJDki_m6XHWjU/view?usp=sharing" target="_blank" rel="noopener">TD Slides</a>
+      <a href="https://drive.google.com/file/d/1OgipushKO_jUj7A8zfnC0NnVa7xUPm40/view?usp=sharing" target="_blank" rel="noopener">BW Slides</a>
+    </div>
+  </div>
+
+  <div class="lecture">
+    <div class="lecture-title">Week 8: Intro to SUSY</div>
+    <div class="lecture-desc">Homotopical regularization.</div>
+    <div class="links">
+      <a href="https://media.ed.ac.uk/media/Twisted+QFT+Week+8/1_ko666jhl" target="_blank" rel="noopener">Video</a>
+      <a href="https://drive.google.com/file/d/12ZTRtI0yDJCobgkFrMoNM9DHqnHjpjtk/view?usp=sharing" target="_blank" rel="noopener">TD Slides</a>
+      <a href="https://drive.google.com/file/d/1oHs9mzLOnZOC82DmE9WXwUyuOls6f6eh/view?usp=sharing" target="_blank" rel="noopener">BW Slides</a>
+    </div>
+  </div>
+
+  <div class="lecture">
+    <div class="lecture-title">Week 9: SUSY QM and topological QM</div>
+    <div class="lecture-desc"></div>
+    <div class="links">
+      <a href="https://media.ed.ac.uk/media/Twisted+QFT+Week+9/1_ci38ab1w" target="_blank" rel="noopener">Video</a>
+      <a href="https://drive.google.com/file/d/1dhIrNFjySbgMeQgU3JtZAD7PjgA7dXpW/view?usp=sharing" target="_blank" rel="noopener">TD Slides</a>
+      <a href="https://drive.google.com/file/d/1OgipushKO_jUj7A8zfnC0NnVa7xUPm40/view?usp=sharing" target="_blank" rel="noopener">BW Slides</a>
+    </div>
+  </div>
+
 </html>
