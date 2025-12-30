@@ -1,82 +1,94 @@
-
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-
-<style>
-body {
-  background-color: DFD0DF;
-}
-</style>
-<body>
-
-<title>lunch
-</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Geometry and Physics Lunch Seminar - Fall 2025</title>
 <link href="../styles.css" type="text/css" rel="stylesheet" />
+<style>
+  /* Minimal overrides or additions for spacing */
+  #header h2, #header h3 {
+    margin: 0.2em 0;
+  }
+  
+  #intro p {
+    max-width: 700px;
+    margin: 1em auto;
+    line-height: 1.5;
+  }
+  
+  /* List styling consistent and spaced */
+  #schedule-list {
+    max-width: 750px;
+    margin: 1em auto 3em;
+    padding-left: 1.2em;
+  }
+  #schedule-list li {
+    margin-bottom: 1em;
+  }
+  #schedule-list a {
+    color: #fabd2f;
+    text-decoration: none;
+  }
+  #schedule-list a:hover {
+    text-decoration: underline;
+  }
+  
+  iframe {
+    display: block;
+    margin: 2em auto 3em;
+    max-width: 100%;
+    border: 1.5px solid #665c54;
+    border-radius: 5px;
+  }
+</style>
 </head>
+<body>
 
 <div id="container">
 
-<div id="header">
-  <h2>The geometry and physics lunch seminar </h2>
-  <br>
-  <h3> Fall 2025</h3>
+  <div id="header" style="text-align:center;">
+    <h2>The geometry and physics lunch seminar</h2>
+    <h3>Fall 2025</h3>
+  </div>
+
+  <div id="intro">
+    <p>
+      This is a seminar series about topics in geometry and physics. The seminar is held every <b>Wednesday from noon–1pm in CDS 524</b>. You are encouraged to bring your lunch.
+      If you would like to be added to the email list for this seminar, please reach out to <a href="mailto:bwill22@bu.edu">bwill22@bu.edu</a>.
+    </p>
+    <p>
+      The topics vary from foundational, classical, to cutting-edge new research. Typically, the topic will be framed by a particular article.
+      You can see the current list of topics below. If you would like to have write-access to this list of topics, please reach out to <a href="mailto:bwill22@bu.edu">bwill22@bu.edu</a>.
+    </p>
+  </div>
+
+  <hr />
+
+  <div id="intro">
+    <h4>Schedule</h4>
+    <ul id="schedule-list">
+      <li>September 3: welcome to the semester, no topic this week.</li>
+      <li>September 10: <a href="https://arxiv.org/abs/0812.0224" target="_blank" rel="noopener">A Note on Self-Dual Yang-Mills Theory</a>, by M.V. Movshev. Presented by <a href="https://www.bu.edu/math/profile/yan-xuan/" target="_blank" rel="noopener">Yan Xuan</a>.</li>
+      <li>September 17: Computations with the Jones polynomial. Presented by <a href="https://cesail.github.io/" target="_blank" rel="noopener">Cesai Li</a>.</li>
+      <li>September 24: "Chiral de Rham complex" by Malikov, Schechtman, Vayntrob. Presented by Tianchen Tang.</li>
+      <li>October 1: Deformation quantization, sigma-models, and more.</li>
+      <li>October 8: "Quantum BCOV theory on CY manifolds" by Costello and Li. Presented by Severin Konig.</li>
+    </ul>
+  </div>
+
+  <div id="intro">
+    <h4>Current list of potential topics</h4>
+    <center>
+      <iframe 
+        width="750" height="520" 
+        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSbg45krYQ68S6S5Q3sLZglVIu52u0QEJvE3_NvBw55kIrCMRCTQxhAldMmCH0C0u-wvLxFo-ctXT_U/pubhtml?widget=true&amp;headers=false"
+        title="Lunch Seminar Topics Spreadsheet"
+      ></iframe>
+    </center>
+  </div>
+
 </div>
 
-<!--<center>
-  <i> Differential geometry is the study of things that are invariant under changes of notation.</i> 
-</center>
-<p align="right">John Lee "Smooth Manifolds" (for example).</p>
--->
-<hr>
-
-<div id="intro">
-This is a seminar series about topics in geometry and physics.
-The seminar is held every <b>Wednesday from noon-1pm in CDS 524</b>.
-You are encouraged to bring your lunch.
-If you would like to be added to the email list for this seminar, please reach out to <a href="bwill22@bu.edu"> bwill22@bu.edu</a>.
-
-<br>
-<br>
-
-The topics vary from foundational, classical, to cutting-edge new research.
-Typically, the topic will be framed by a particular article.
-You can see the current list of topics below.
-If you would like to have write-access to this list of topics, please reach out to <a href="bwill22@bu.edu"> bwill22@bu.edu</a>.
-
-<br>
-
-</div>
-
-<hr>
-
-<div id="intro">
-
-<h4> Schedule </h4>
-
-  <li> September 3: welcome to the semester, no topic this week. 
-    <br>
-  <li> September 10: <a href="https://arxiv.org/abs/0812.0224">A Note on Self-Dual Yang-Mills Theory</a>, by M.V. Movshev. 
-    Presented by <a href="https://www.bu.edu/math/profile/yan-xuan/"> Yan Xuan</a>. 
-    <br>
-  <li> September 17: Computations with the Jones polynomial. 
-    Presented by <a href="https://cesail.github.io/">Cesai Li</a>. 
-    <br>
-    <li> September 24: "Chiral de Rham complex" by Malikov, Schechtman, Vayntrob. Presented by Tianchen Tang.
-      <br>
-  <li> October 1: Deformation quantization, sigma-models, and more.
-    <br>
-  <li> October 8: "Quantum BCOV theory on CY manifolds" by Costello and Li. Presented by Severin Konig.
-</div>
-
-<div id="intro">
-  <h4> Current list of potential topics </h4>
-
-<center>
-<iframe width ="750" height="520" 
-                     src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSbg45krYQ68S6S5Q3sLZglVIu52u0QEJvE3_NvBw55kIrCMRCTQxhAldMmCH0C0u-wvLxFo-ctXT_U/pubhtml?widget=true&amp;headers=false">
-</iframe>
-</center>
-<br>
-</div> 
-
+</body>
+</html>
