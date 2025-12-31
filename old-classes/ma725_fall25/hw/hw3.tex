@@ -1,0 +1,69 @@
+\documentclass[../main.tex]{subfiles}
+
+\usepackage{amssymb}
+
+\title{ sheet 1.2 }
+
+\begin{document}
+\section*{MA 725 - Differential Geometry, I \\ \color{purple} \small Homework 3}
+
+\subsection*{Problem 1} Clean up.
+\begin{enumerate}
+  \item Fix a connection on a vector bundle and let $\omega,\Omega$ be the connection and curvature matrices relative to a local frame.
+Prove the generalized Bianchi identity
+\begin{equation}\label{}
+  \d \Omega^k = \Omega^k \wedge \omega - \omega \wedge \Omega^k
+\end{equation}
+\item Suppose that $\nabla, \nabla'$ are connections. Show that for any numbers $t,s$ such that $t + s = 1$ that the
+  linear operator 
+  \begin{equation}\label{}
+    t \nabla + s \nabla'
+  \end{equation}
+is a connection.
+\end{enumerate}
+
+\subsection*{Problem 2}
+
+\begin{enumerate}
+  \item Show that $P \in \R[\lie{gl}_r]$ is an invariant polynomial if and only if $P(XY) = P(YX)$ for all matrices $X,
+    Y$.
+  \item Let $\{s_i\}$, $\{\sigma_i\}$ be the trace and symmetric polynomials, respectively.
+    Show that 
+    \[
+      s_1 = \sigma_1, \quad s_2 = \sigma_1^2 - 2 \sigma_2, \quad s_3 = \sigma_1^3 - 3\sigma_1 \sigma 2 + 3 \sigma_3 
+      \]
+    \item Suppose that $V \to M$ is a complex vector bundle. Show that 
+      \begin{equation}\label{}
+        p_1 (V) = c_1(V)^2 - 2 c_2(V) .
+      \end{equation}
+    \end{enumerate}
+
+    \subsection*{Problem 3}
+    In this problem you will compute the Chern classes of complex projective space.
+    \begin{enumerate}
+      \item Let $\gamma$ be the canonical line bundle over $\CP^n$.
+        Describe a vector bundle $\omega$ with the property that $\gamma \oplus \omega$ is isomorphic to the trivial
+        rank $(n+1)$ complex vector bundle.
+      \item Show that $\op{Hom}_{\C}(\gamma, \omega) \cong T_{\CP^n}$.
+      \item Let $\ul{\C}$ be the trivial rank one vector bundle.
+        Show that $\T_{\CP^n} \oplus \ul{\C} \cong (\gamma^*)^{\oplus (n+1)}$.
+      \item Conclude that 
+        \begin{equation}\label{}
+          c(\gamma^*)^{n+1} = (1-c_1(\gamma))^{n+1}.
+        \end{equation}
+      \item Conclude that $c(T_{\CP^n}) = (1+a)^{n+1}$ for some $a \in H^2(\CP^{n} ; \Z)$.
+      \end{enumerate}
+
+      \subsection*{Problem 4}
+      Suppose that $E$ is a $2k$-dimensional vector bundle.
+      Show that $p_k(E) = e(E)^2$.
+
+      \subsection*{Problem 5}
+      Suppose that $L$ is a complex line bundle and $V$ is a complex vector bundle of rank $r$.
+      Find a formula for $c(L \otimes V)$ in terms of $c(L)$ and $c(V)$.
+
+      \subsection*{Problem 6}
+      Suppose that $S^n$ admits a complex structure.
+      Show that $n \equiv 2 \mod 4$  (there are no "big theorems" at play here).
+
+\end{document}

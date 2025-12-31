@@ -1,0 +1,54 @@
+
+\documentclass[main.tex]{subfiles}
+
+\usepackage{amssymb}
+
+\title{ sheet 1.1 }
+
+\begin{document}
+\section*{MA 725 - Differential Geometry, I \\ \color{purple} \small Final exam}
+
+\subsection*{Problem 1} 
+
+Suppose that $(V,\<-,-\>)$ is a $2n$-dimensional Euclidean vector space equipped with a compatible complex structure $J$ and denote
+$\omega \in \wedge^2 V^*$ its fundamental (K\"ahler) form.
+Let $L \colon \wedge^\bu V^* \to \wedge^{\bu} V^* [2]$ be the Lefshetz operator, $L\alpha = \omega \wedge \alpha$, and
+let $\Lambda \colon \wedge^\bu V^* \to \wedge^\bu V^* [-2]$ be the dual Lefshetz operator defined by the condition $\<\Lambda \alpha, \beta\> = \<\alpha , L \beta\>$.
+
+Show that as degree zero endomorphisms of $\wedge^\bu V^*$ one has the equality
+\begin{equation}\label{}
+H \define  L \circ \Lambda - \Lambda \circ L = \sum_{k=0}^{2n} (k-n) \pi^k 
+\end{equation}
+where $\pi^k$ is projection onto $\wedge^k V^*$.
+In other words, $[L,\Lambda]$ acts diagonally with eigenvalue $(k-n)$ on $\wedge^k V^*$.
+
+Together, $\{L,\Lambda, H\}$ form a representation of $\lie{sl}(2)$ on $\wedge^\bu V^*$.
+Can a compact, simply connected six-manifold with $\chi=7$ be equipped with a K\"ahler metric?
+
+Suppose that $M$ is a compact, four-dimensional complex manifold with $\dim H^{1,1} > \dim H^{2,2}$?
+Can $M$ be equipped with a compatible K\"ahler metric?
+\newpage 
+
+\subsection*{Problem 2}
+
+Prove that all spheres are formal.
+
+Show that any Hopf surface $(\C^2 \setminus 0) \slash (q^{\Z})$ is formal.
+
+Produce a minimal model for $\mathbf{CP}^n$.
+
+Describe the Hopf fibration $S^3 \to \mathbf{CP}^1$ at the level of their minimal models.
+
+\newpage 
+
+\subsection*{Problem 3} 
+
+Let $M$ be a compact K\"ahler manifold.
+Suppose that $\alpha \in \Omega^{1,1}(M)$ is a $\d$-closed $(1,1)$ form which is primitive $\Lambda(\alpha) = 0$.
+Show that $\Delta \alpha = 0$.
+
+Prove that the K\"ahler form $\omega$ satisfies $\Delta \omega = 0$.
+
+Show that if $\omega'$ is another K\"ahler form on $M$ with $[\omega] = [\omega'] \in H^2(M,\R)$ that there exists a
+real function $f \in C^\infty(M)$ such that $\omega' = \omega + \im \del \dbar f$.
+\end{document}

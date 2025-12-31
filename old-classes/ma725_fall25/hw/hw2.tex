@@ -1,0 +1,103 @@
+\documentclass[../main.tex]{subfiles}
+
+\usepackage{amssymb}
+
+\title{ sheet 1.2 }
+
+\begin{document}
+\section*{MA 725 - Differential Geometry, I \\ \color{purple} \small Homework 2}
+
+\subsection*{Problem 1} 
+Suppose that $(M,g)$ is a Riemannian manifold of dimension $n$ with constant curvature $k$.
+Recall that this means means that there exists a constant $k$ such that for each $p \in M$ one has 
+\begin{equation*}\label{}
+  R(v,w) z = k (v \wedge w ) (z)
+\end{equation*}
+for all $v,w,z\in T_p M$.
+
+\begin{enumerate}
+  \item[(1)] Show that $(M,g)$ is an Einstein manifold with Einstein constant $(n-1)k$.
+    Recall, this means that for all $p \in M$ one has 
+    \begin{equation*}\label{}
+      Ric(v,w) = (n-1)k g(v,w)
+    \end{equation*}
+    for all $v,w \in T_p M$.
+
+  \item[(2)] Show that $(M,g)$ has constant scalar curvature $\op{scal} = n(n-1)k$. 
+
+  \item[(3)] From the scalar curvature, we can define the one-form $\d \op{scal}$.
+    Additionally, recall that given any tensor $T$ of type $(1,r)$, we can define its divergence $\op{div}(T)$ to be the
+    $(0,r)$ tensor defined by 
+    \begin{equation*}\label{}
+      \op{div} T = \op{tr} \nabla T . 
+    \end{equation*}
+    In other words, for vector fields $X_1,\ldots,X_r$, one defines $\op{div} T$ by the rule 
+    \begin{equation*}\label{}
+      (\op{div} T)(X_1,\ldots,X_n) = \op{tr}(Y \mapsto (\nabla_Y S) (X_1,\ldots,X_n)) .
+    \end{equation*}
+    Show that 
+    \begin{equation*}\label{}
+      \d \op{scal} = 2 \op{div} \op{Ric} . 
+    \end{equation*}
+  \end{enumerate}
+
+  \subsection*{Problem 2} \textit{}
+  Let $G$ be a Lie group equipped with a bi-invariant metric, and identify $\lie{g}$ with the Lie algebra of left-invariant vector fields.
+  Let $[\lie{g},\lie{g}] \subset \lie{g}$ be the subspace of elements of the form $[X,Y]$ where $X,Y \in \lie{g}$.
+  Consider the linear map $\wedge^2 \lie{g} \to [\lie{g} , \lie{g}]$ defined by $X \wedge Y \mapsto [X,Y]$.
+  Show that this map is an isomorphism if and only if $G$ has constant curvature.
+  (This only happens when the Lie algebra $\lie{g}$ is $\lie{su}(2)$, so the $G$ is three-dimensional.)
+
+  \newpage
+
+  \subsection*{Problem 3} 
+  Prove that the Ricci tensor is a symmetric $(0,2)$ tensor.
+
+  \subsection*{Problem 4}
+  The \textit{Einstein tensor} of $(M,g)$ is defined to be the symmetric $(0,2)$ tensor 
+  \begin{equation}\label{}
+    G \define \op{Ric} - \frac{\op{scal}}{2} \cdot g .
+  \end{equation}
+  Show that $G = 0$ when $\dim M = 2$.
+  Show that, in general $\dim M > 2$, that $G = 0$ if and only if the metric is Ricci flat (meaning $\op{Ric} = 0$).
+
+
+  \subsection*{Problem 5}
+  Recall that by restriction the metric on $\R^{n}$ determines a metric on the sphere $S^{n-1}(1)$ of radius $1$,
+  which we will denote by $\d s^2_{n-1}$.
+  In polar coordinates, the standard metric on $\R^n$ can be written as 
+  \begin{equation}\label{}
+    g = \d r^2 + g_{S^{n-1}(r)} = \d r^2 + r^2 \d s_{n-1}^2
+  \end{equation}
+  where $g_{S^{n-1}(r)} = r^2 \d s_{n-1}^2$ is the metric on the sphere $S^{n-1}(r)$ of radius $r$.
+  \begin{enumerate}
+    \item[(a)] Show that $\op{Hess}(r) = \frac{1}{r} g_{S^{n-1}(r)}$.
+        \end{enumerate}
+
+  More generally, let $\varphi_k(r)$ be the unique solution to the ordinary differential equation
+  \begin{equation}\label{}
+    \ddot{\varphi}_k + k \varphi_k = 0
+  \end{equation}
+  satisfying $\varphi(0) = 0, \dot{\varphi}(0) = 1$.
+  Denote 
+  \begin{equation}\label{}
+    g_k = \d r^2 + \varphi_k(r)^2 \d s_{n-1}^2 .
+  \end{equation}
+  \begin{enumerate}
+    \item[(b)] Show that when $k = 1$, the metric $g_1$ is that of the $n$-dimensional sphere $S^n$ of radius $1$.
+    \item[(c)] Show that the metric $g_k$ is of constant curvature $k$.
+    \end{enumerate}
+
+    Even more generally, consider a metric of the form 
+    \begin{equation}\label{}
+      g_\varphi = \d r^2 + \varphi^2 \d s_{n-1}^2 .
+    \end{equation}
+    where $\varphi = \varphi(r)$ is a smooth function of $r$.
+    \begin{enumerate}
+      \item[(d)] Show that $\op{Hess}(r) = (\varphi \del_r\varphi ) \d s_{n-1}^2$.
+      \item[(e)] Show that the only metrics $g_\varphi$ which are Ricci flat are, in fact, flat metrics (so $\varphi(r)
+        = a \pm r$).
+      \end{enumerate}
+
+\end{document}
+

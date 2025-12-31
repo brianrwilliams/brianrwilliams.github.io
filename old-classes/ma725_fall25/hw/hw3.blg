@@ -1,0 +1,4 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'hw3.blg'
+[20] biber-darwin:340> INFO - === Fri Oct  3, 2025, 11:42:23
+[24] Biber.pm:419> INFO - Reading 'hw3.bcf'

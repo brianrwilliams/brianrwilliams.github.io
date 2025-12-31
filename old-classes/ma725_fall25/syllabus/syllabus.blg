@@ -1,0 +1,4 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'syllabus.blg'
+[21] biber-darwin:340> INFO - === Wed Aug 27, 2025, 15:51:59
+[27] Biber.pm:419> INFO - Reading 'syllabus.bcf'

@@ -1,0 +1,102 @@
+
+\documentclass[../main.tex]{subfiles}
+
+\usepackage{amssymb}
+
+\title{ sheet 1.1 }
+
+\begin{document}
+\section*{MA 725 - Differential Geometry, I \\ \color{purple} \small Homework 1}
+
+\subsection*{Problem 1} 
+
+\documentclass[../main.tex]{subfiles}
+
+\usepackage{amssymb}
+
+\title{ sheet 1.1 }
+
+\begin{document}
+\section*{MA 725 - Differential Geometry, I \\ \color{purple} \small Homework 1}
+
+\subsection*{Problem 1} 
+
+
+Let $V$ be an $n$-dimensional real vector space equipped with a symmetric, non-degenerate bilinear form $\< - , - \>
+\colon V \times V \to \R$.
+
+\begin{enumerate}
+  \item Show that $V$ admits a splitting $V = P \oplus N$ where $\< - , - \>$ is positive definite on $P$ and negative
+    definite on $N$.
+    Show that $p = \dim P$ is unique, that is, depends only on the form $\< - , - \>$. 
+    The pair of integers $(\dim P ,\dim N)$ is called the \textit{signature} of $\< - , - \>$.
+  \item Show that there exists a basis $\{e_i\}$ for $V$ such that $\<e_i,e_j\> = 0$ for $i \ne j$, $\<e_i,e_i\> = 1$ if
+    $i=1,\ldots, p$, and $\<e_j, e_j\> = -1$ if $j=p+1,\ldots, n$.
+  \item Fix a basis as in the previous part of the problem. 
+    Let $T \in \op{End}(V)$ be an endomorphism.
+    Prove that 
+    \[\label{}
+      \op{tr}(T) = \sum_{i=1}^n \<T(e_i), e_i\> . 
+    \]
+  \end{enumerate}
+
+  \subsection*{Problem 2} 
+  Let $G$ be a compact Lie group.
+  \begin{enumerate}
+    \item Show that $G$ admits a bi-invariant metric $g$.
+      That is, a metric which is invariant under both right and left translations. (Hint: Argue that you can always
+      product a left-invariant metric $g_L$ and a left-invariant volume form $\omega \in \Omega^{\dim G}(G)$.
+      Then, show that the metric $g$ defined by
+      \[
+        g(v,w) = \frac{1}{\int_G \omega} \int_{x \in G} g_L(\d R_x (v), \d R_x (w)) \omega  
+      \]
+      is bi-invariant.)
+    \item For $h \in G$, consider the inner automorphism $\op{Ad}_h \colon G \to G$ defined by $\op{Ad}_h(x) = h x
+      h^{-1}$.
+      Show that $\op{Ad}_h$ is an isometry with respect to the bi-invariant metric in part (a).
+    \item Let $\lie{g}$ be the Lie algebra of $G$ and let $\op{ad}_h$ be the differential of $\op{Ad}_h$ at $e \in G$.
+      Show that $\op{ad}_h \colon \lie{g} \to \lie{g}$ is a linear isometry (with respect to the metric $g_e$ on
+      $\lie{g}$.)
+    \item Use part (3) to show that 
+        \[
+          g_e ([Z,X], Y) = - g_e(X, [Z,Y])
+        \]
+      for all $X,Y,Z \in \lie{g}$.
+    \end{enumerate}
+
+    \newpage 
+
+    \subsection*{Problem 3}
+    Let $(M,g)$ be an oriented Riemannian manifold of dimension $n$.
+    Define the Riemannian volume form $\op{dvol}$ as follows:
+    \[
+      \op{dvol}(v_1,\ldots,v_n) = \op{det}(g(v_i,e_j))
+    \]
+    where $\{e_i\}$ is a positively oriented orthonormal basis for $T_p M$.
+    \begin{enumerate}
+      \item Show that the volume form is parallel.
+      \item Show that in positively oriented coordinates, one has
+        \[\label{}
+          \op{dvol} = \sqrt{\det(g_{ij})} \d x^1 \wedge \cdots \wedge \d x^n .
+        \]
+      \item If $X$ is a vector field, show that $L_X \op{dvol} = \op{div}(X) \op{dvol}$.
+      \item Show that the Laplacian admits the following local formula 
+        \[ \triangle u = \frac{1}{\sqrt{\det(g_{ij})}} \del_k \left(\sqrt{\det(g_{ij})} g^{kl} \del_l u \right) 
+        \]
+      \end{enumerate}
+
+      \subsection*{Problem 4} 
+      If $F \colon M \to M$ is a diffeomorphism, and $X$ is a vector field, define the pushforward vector field $F_*X$
+      by the formula 
+      \[
+        (F_* X)_p = \d F(X_{F^{-1} (p)}) .
+      \]
+      Show that $F_* (\nabla_X Y) = \nabla_{F_* X} F_* Y$ for any affine connection $\nabla$.
+      
+      \subsection*{Problem 5}
+      Let $G$ be a Lie group.
+      Show that there exists a unique affine connection $\nabla$ such that $\nabla X = 0$ for all left-invariant vector
+      fields $X$.
+      Show that this connection is torsion-free if and only if $G$ is abelian.
+
+\end{document}

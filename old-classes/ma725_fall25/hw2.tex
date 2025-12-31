@@ -1,0 +1,54 @@
+
+\documentclass[../main.tex]{subfiles}
+
+\usepackage{amssymb}
+
+\title{ sheet 1.1 }
+
+\begin{document}
+\section*{MA 725 - Differential Geometry, I \\ \color{purple} \small Homework 1}
+
+\subsection*{Problem 1}
+
+Let $G$ be a Lie group equipped with a bi-invariant metric (for example, a compact Lie group).
+Show the following (where all vector fields are left-invariant):
+\begin{enumerate}
+  \item[(1)] $\nabla_X Y = \frac12 [X,Y]$.
+  \item[(2)] $R(X,Y)Z = \frac14 [Z,[X,Y]]$.
+  \item[(3)] $g(R(X,Y)Z,W) = - \frac14 g([X,Y], [Z,W])$.
+  \item[(4)] $\op{Ric}(X,X)=0$ if and only if $X$ commutes with all other left-invariant vector fields.
+  \end{enumerate}
+  
+\subsection*{Problem 2}
+Let $(M,g)$ be a Riemannian manifold such that $\nabla \op{Ric} = 0$.
+Show that the scalar curvature of $M$ is constant.
+
+\subsection*{Problem 3}
+
+A \textit{almost complex manifold} is a smooth manifold $M$ equipped with a bundle isomorphism $J \colon T_M \colon
+T_M$ satisfying $J^2 = -\id$. 
+
+\begin{enumerate}
+\item[(1)] 
+  For vector fields $X,Y$ define 
+  \begin{equation}\label{}
+  N(X,Y) = [J(X), J(Y)] - J([J(X),Y]) - J([X,J(Y)]) - [X,Y] .
+  \end{equation}
+  Show that $N$ is a tensor of type $(1,2)$.
+\end{enumerate}
+
+  We say that $J$ is \textit{integrable} if $N = 0$.
+  (A famous theorem in complex geometry is that $M$ is a complex manifold if and only if $J$ is integrable.)
+
+  \begin{enumerate}
+    \item[(2)] A Hermitian structure on an almost complex manifold $(M,J)$ is a Riemannian metric $g$ on $M$ such that
+      $g(J(X),J(Y)) = g(X,Y)$.
+      Show that the expression 
+      \begin{equation}\label{}
+        \omega(X,Y) = g(J(X),Y)
+      \end{equation}
+      is antisymmetric, and hence is a two-form on $M$.
+    \item[(3)] Show that $\d \omega = 0$ if and only if $\nabla J = 0$.
+  \end{enumerate}
+
+\end{document}
