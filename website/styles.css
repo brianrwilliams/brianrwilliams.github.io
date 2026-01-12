@@ -225,42 +225,49 @@ b {
 }
 
 /*schedule for classes*/ 
-
 .schedule-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px 30px;
-  max-width: 850px;
-  margin: 0 auto;
-  font-family: 'Inconsolata LGC Nerd Font', monospace;
-  color: #ebdbb2; /* light text */
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 12px 30px;
+max-width: 850px;
+margin: 0 auto;
+font-family: 'Inconsolata LGC Nerd Font', monospace;
+color: #ebdbb2;
+}
+.sched-row {
+display: flex;
+align-items: center;
+justify-content: space-between;
+background: #3c3836;
+border: 1.5px solid #665c54;
+padding: 10px 15px;
+border-radius: 4px;
+font-size: 0.9rem;
+gap: 12px;
+min-height: 44px;
+box-sizing: border-box;
+}
+.sched-text { flex: 1 1 auto; min-width: 0; color: #ebdbb2; }
+.sched-link, .sched-link-placeholder {
+width: 28px; height: 28px;
+display: inline-flex; align-items: center; justify-content: center;
+text-decoration: none; color: #72875b; flex: 0 0 auto;
+}
+.sched-link:hover, .sched-link:focus { color: #b8bb26; text-decoration: none; outline: none; }
+.fa-icon {
+font-family: "Font Awesome 6 Free";
+font-weight: 900;
+font-size: 16px; line-height: 1;
+display: inline-block; width: 16px; height: 16px; text-align: center;
+}
+.sched-link-placeholder { visibility: hidden; }
+@media (max-width: 420px) {
+.sched-row { flex-wrap: wrap; align-items: flex-start; }
+.sched-text { order: 0; width: 100%; }
+.sched-link { order: 1; margin-top: 6px; width: 36px; height: 22px; }
 }
 
-.schedule-grid div {
-  background: #3c3836;
-  border: 1.5px solid #665c54;
-  padding: 10px 15px;
-  border-radius: 4px;
-  font-size: 0.9rem;
-}
 
-.schedule-grid a {
-  color: #72875b;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.schedule-grid a:hover,
-.schedule-grid a:focus {
-  color: #b8bb26;
-  text-decoration: underline;
-}
-
-  @media (max-width: 520px) {
-.schedule-grid {
-grid-template-columns: 1fr; /* single column on narrow viewports */
-}
-}
 /*quizzes for classes*/ 
 
 /* Grid container for quiz entries */
