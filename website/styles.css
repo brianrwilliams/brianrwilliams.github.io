@@ -361,3 +361,67 @@ grid-template-columns: 1fr; /* single column on narrow viewports */
     width: auto;
   }
 }
+
+.mini-paper{
+--w: 44px;
+--h: 60px;
+position: relative;
+display: inline-block;
+width: var(--w);
+height: var(--h);
+padding: 6px 6px 10px 12px;
+box-sizing: border-box;
+background: #fffefc;
+border: 1px solid #d8d3c8;
+border-radius: 4px;
+text-decoration: none;
+color: inherit;
+font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+font-size: 9px;
+text-align: center;
+vertical-align: middle;
+transition: box-shadow .12s ease, transform .06s ease;
+overflow: hidden;
+}
+
+.mini-paper:focus,
+.mini-paper:hover{
+box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+transform: translateY(-1px);
+outline: none;
+}
+
+.mini-paper__lines{
+display: block;
+height: 42px; /* visible ruled area /
+margin-left: 6px; / space for the left margin stripe /
+background-image:
+linear-gradient(rgba(48,88,148,0.18) 1px, transparent 1px);
+background-size: 100% 8px; / spacing between lines */
+border-radius: 2px;
+}
+
+.mini-paper::before{
+content: "";
+position: absolute;
+left: 8px;
+top: 8px;
+width: 2px;
+height: 42px;
+background: rgba(180,70,60,0.18);
+border-radius: 1px;
+pointer-events: none;
+}
+
+.mini-paper__label{
+display: block;
+margin-top: 4px;
+color: #6b6b6b;
+font-size: 8px;
+line-height: 1;
+pointer-events: none;
+}
+
+/* optional size utilities */
+.mini-paper--sm { --w: 36px; --h: 48px; font-size: 8px; }
+.mini-paper--lg { --w: 56px; --h: 80px; font-size: 10px; }
