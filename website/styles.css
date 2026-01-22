@@ -271,17 +271,17 @@ display: inline-block; width: 16px; height: 16px; text-align: center;
 /*quizzes for classes*/ 
 
 /* Grid container for quiz entries */
-  .quiz-grid {
+  .exercise-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 16px 24px;
   }
 
-/* Each quiz entry is a grid with three columns: date | content | solution icon */
+/* Each exercise entry is a grid with three columns: section | content | solution link */
 
-.quiz-item {
+.exercise-item {
 display: grid;
-grid-template-columns: 90px 1fr 36px; / added third column for the icon */
+grid-template-columns: 90px 1fr 36px; /* added third column for the icon */
 column-gap: 20px;
 background-color: #3c3836;
 border: 1.5px solid #665c54;
@@ -292,15 +292,43 @@ font-size: 0.95rem;
 color: #ebdbb2;
 }
 
+/* section on left */
+.exercise-section {
+font-weight: 700;
+color: #fabd2f;
+user-select: none;
+text-align: left;
+}
+
+/* Links/content in middle stacked vertically */
+.exercise-content {
+display: flex;
+flex-direction: column;
+gap: 6px;
+}
+
+.exercise-content a {
+color: #72875b; /* muted forest green */
+font-weight: 600;
+text-decoration: none;
+transition: color 0.3s ease;
+}
+
+.exercise-content a:hover,
+.exercise-content a:focus {
+color: #b8bb26; / bright Gruvbox green */
+text-decoration: underline;
+}
+
 /* small column for the solution icon/link */
-.quiz-solution {
+.exercise-solution {
 display: flex;
 align-items: center;
 justify-content: center;
 }
 
 /* style the link/icon inside that column */
-.quiz-solution a {
+.exercise-solution a {
 color: #fabd2f;               / match date color or choose /
 font-weight: 700;
 text-decoration: none;
@@ -316,8 +344,8 @@ transition: background-color 0.15s ease, color 0.15s ease;
 }
 
 /* hover/focus affordance for the icon link */
-.quiz-solution a:hover,
-.quiz-solution a:focus {
+.exercise-solution a:hover,
+.exercise-solution a:focus {
 background-color: rgba(184,187,38,0.12);
 color: #b8bb26;
 text-decoration: none;
@@ -326,17 +354,72 @@ outline: none;
 
 /* responsive tweaks: reduce third column on small screens */
 @media (max-width: 480px) {
-.quiz-item {
+.exercise-item {
 grid-template-columns: 70px 1fr 32px; / keep third column but smaller */
 padding: 12px 15px;
 font-size: 0.9rem;
 }
-.quiz-solution a {
+.exercise-solution a {
 width: 24px;
 height: 24px;
 font-size: 0.95rem;
 }
 }
+
+/* Each quiz entry is a grid with two columns */
+  .quiz-item {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    column-gap: 20px;
+    background-color: #3c3836;
+    border: 1.5px solid #665c54;
+    border-radius: 6px;
+    padding: 15px 20px;
+    align-items: center; /* vertical center the two columns */
+    font-size: 0.95rem;
+    color: #ebdbb2;
+  }
+
+  /* Date on left */
+  .quiz-date {
+    font-weight: 700;
+    color: #fabd2f;
+    user-select: none;
+  }
+
+  /* Links on right stacked vertically */
+  .quiz-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .quiz-links a {
+    color: #72875b; /* muted forest green */
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  .quiz-links a:hover,
+  .quiz-links a:focus {
+    color: #b8bb26; /* bright Gruvbox green */
+    text-decoration: underline;
+  }
+
+  /* Responsive tweaks */
+  @media (max-width: 480px) {
+    .quiz-grid {
+      grid-template-columns: 1fr;
+    }
+    body {
+      margin: 20px 10px;
+    }
+    .quiz-item {
+      grid-template-columns: 70px 1fr;
+      padding: 12px 15px;
+      font-size: 0.9rem;
+    }
+  }
 
 .header-with-image {
   display: flex;
