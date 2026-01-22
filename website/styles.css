@@ -332,6 +332,104 @@ display: inline-block; width: 16px; height: 16px; text-align: center;
     }
   }
 
+/* Grid container for exercise entries */
+  .exercise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 16px 24px;
+  }
+
+/* Each exercise entry is a grid with three columns: section | content | solution link */
+
+.exercise-item {
+display: grid;
+grid-template-columns: 90px 1fr 36px; /* added third column for the icon */
+column-gap: 20px;
+background-color: #3c3836;
+border: 1.5px solid #665c54;
+border-radius: 6px;
+padding: 15px 20px;
+align-items: center;
+font-size: 0.95rem;
+color: #ebdbb2;
+}
+
+/* section on left */
+.exercise-section {
+font-weight: 700;
+color: #fabd2f;
+user-select: none;
+text-align: left;
+}
+
+/* Links/content in middle stacked vertically */
+.exercise-content {
+display: flex;
+flex-direction: column;
+gap: 6px;
+}
+
+.exercise-content a {
+color: #72875b; /* muted forest green */
+font-weight: 600;
+text-decoration: none;
+transition: color 0.3s ease;
+}
+
+.exercise-content a:hover,
+.exercise-content a:focus {
+color: #b8bb26; / bright Gruvbox green */
+text-decoration: underline;
+}
+
+/* small column for the solution icon/link */
+.exercise-solution {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+/* style the link/icon inside that column */
+.exercise-solution a {
+color: #fabd2f;               / match date color or choose /
+font-weight: 700;
+text-decoration: none;
+font-size: 1.05rem;          / adjust to taste */
+line-height: 1;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+width: 28px;
+height: 28px;
+border-radius: 4px;
+transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+/* hover/focus affordance for the icon link */
+.exercise-solution a:hover,
+.exercise-solution a:focus {
+background-color: rgba(184,187,38,0.12);
+color: #b8bb26;
+text-decoration: none;
+outline: none;
+}
+
+/* responsive tweaks: reduce third column on small screens */
+@media (max-width: 480px) {
+.exercise-item {
+grid-template-columns: 70px 1fr 32px; / keep third column but smaller */
+padding: 12px 15px;
+font-size: 0.9rem;
+}
+.exercise-solution a {
+width: 24px;
+height: 24px;
+font-size: 0.95rem;
+}
+}
+
+
+
 .header-with-image {
   display: flex;
   align-items: center;
