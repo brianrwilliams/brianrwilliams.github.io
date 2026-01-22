@@ -1,0 +1,70 @@
+% File: quiz/quiz_0121.tex
+
+\documentclass[12pt]{article}
+
+% Load your custom style package
+\usepackage{/Users/bwill22/brianrwilliams.github.io/new_style}
+%\usepackage{/Users/bwill22/brianrwilliams.github.io/macros-master}
+%\usepackage{/Users/bwill22/brianrwilliams.github.io/macros-master}
+
+% Additional packages needed for this quiz template
+\usepackage{amssymb,amsmath,amsthm}
+
+% Theorem-style environments for questions and solutions
+\theoremstyle{definition}
+\newtheorem{question}{Question}
+
+\theoremstyle{remark}
+\newtheorem*{solution}{Solution}
+
+%\usepackage{euler}
+
+% Itemize and enumerate styles consistent with your style package can remain default
+
+% Page geometry and header/footer can be customized here:
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\headfam\headweight Fake Quiz}
+\fancyhead[C]{\headfam\itshape\large\thetitle}
+\fancyhead[R]{\headfam\headweight Page \thepage}
+% Title formatting uses your package's redefinition, so normal \title works
+\title{MA 442 - Fake Quiz}
+\date{January 21}
+
+\begin{document}
+
+\maketitle
+\vspace{-1em}
+\noindent
+\begin{tabular}{@{}p{1cm}p{8cm}p{1cm}p{5cm}@{}}
+\textbf{Name:} & \hrulefill & \textbf{BUID:} & \hrulefill \\
+\end{tabular}
+
+\vspace{1cm}
+
+Solve \textbf{both} of the following two questions.
+
+\begin{question}
+  Consider the vector space 
+  \[
+    \mathsf{V} = \mathscr{F}(\{0,1,2\}, \mathbb{R})
+  \]
+  of all functions from the three element set $\{0,1,2\}$ to the real
+  numbers. (We defined the vector space structure in discussion.)
+  Consider the functions $f,g, h \in V$ defined by $f(t) = t+1, g(t) = t^3 - 3t^2 + 3t + 1, h(t) = 2 t + 2$.
+
+  \begin{itemize}
+    \item[(a)] Show that $f=g$ in $\mathsf{V}$.
+    \item[(b)] Show that $f+g = h$ in $\mathsf{V}$.
+  \end{itemize}
+\end{question}
+
+\begin{question}
+  Let $\mathsf{V}$ be the set of all functions $f \colon \mathbb{R} \to \mathbb{R}$ such that $f(1) = 0$.
+  Show how $\mathsf{V}$ can be given the structure of a vector space. (You must define addition and scalar
+  multiplication and then justify the axioms of a vector space.)
+\end{question}
+
+\end{document}
