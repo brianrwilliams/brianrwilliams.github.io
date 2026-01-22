@@ -277,60 +277,66 @@ display: inline-block; width: 16px; height: 16px; text-align: center;
     gap: 16px 24px;
   }
 
-  /* Each quiz entry is a grid with two columns */
-  .quiz-item {
-    display: grid;
-    grid-template-columns: 90px 1fr;
-    column-gap: 20px;
-    background-color: #3c3836;
-    border: 1.5px solid #665c54;
-    border-radius: 6px;
-    padding: 15px 20px;
-    align-items: center; /* vertical center the two columns */
-    font-size: 0.95rem;
-    color: #ebdbb2;
-  }
+/* Each quiz entry is a grid with three columns: date | content | solution icon */
 
-  /* Date on left */
-  .quiz-date {
-    font-weight: 700;
-    color: #fabd2f;
-    user-select: none;
-  }
+.quiz-item {
+display: grid;
+grid-template-columns: 90px 1fr 36px; / added third column for the icon */
+column-gap: 20px;
+background-color: #3c3836;
+border: 1.5px solid #665c54;
+border-radius: 6px;
+padding: 15px 20px;
+align-items: center;
+font-size: 0.95rem;
+color: #ebdbb2;
+}
 
-  /* Links on right stacked vertically */
-  .quiz-links {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-  }
+/* small column for the solution icon/link */
+.quiz-solution {
+display: flex;
+align-items: center;
+justify-content: center;
+}
 
-  .quiz-links a {
-    color: #72875b; /* muted forest green */
-    font-weight: 600;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  .quiz-links a:hover,
-  .quiz-links a:focus {
-    color: #b8bb26; /* bright Gruvbox green */
-    text-decoration: underline;
-  }
+/* style the link/icon inside that column */
+.quiz-solution a {
+color: #fabd2f;               / match date color or choose /
+font-weight: 700;
+text-decoration: none;
+font-size: 1.05rem;          / adjust to taste */
+line-height: 1;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+width: 28px;
+height: 28px;
+border-radius: 4px;
+transition: background-color 0.15s ease, color 0.15s ease;
+}
 
-  /* Responsive tweaks */
-  @media (max-width: 480px) {
-    .quiz-grid {
-      grid-template-columns: 1fr;
-    }
-    body {
-      margin: 20px 10px;
-    }
-    .quiz-item {
-      grid-template-columns: 70px 1fr;
-      padding: 12px 15px;
-      font-size: 0.9rem;
-    }
-  }
+/* hover/focus affordance for the icon link */
+.quiz-solution a:hover,
+.quiz-solution a:focus {
+background-color: rgba(184,187,38,0.12);
+color: #b8bb26;
+text-decoration: none;
+outline: none;
+}
+
+/* responsive tweaks: reduce third column on small screens */
+@media (max-width: 480px) {
+.quiz-item {
+grid-template-columns: 70px 1fr 32px; / keep third column but smaller */
+padding: 12px 15px;
+font-size: 0.9rem;
+}
+.quiz-solution a {
+width: 24px;
+height: 24px;
+font-size: 0.95rem;
+}
+}
 
 .header-with-image {
   display: flex;
