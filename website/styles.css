@@ -454,6 +454,45 @@ font-size: 0.95rem;
   border-radius: 4px;     /* optional, softer corners */
   display: block;         /* remove inline spacing artifacts */
 }
+
+.header-with-image .img-wrap {
+position: relative;           /* stacking context for ::after /
+display: inline-block;        / preserves intrinsic img size /
+width: auto;                  / keep current sizing behavior /
+height: auto;
+margin-left: 20px;            / match your current spacing */
+}
+
+.header-with-image .img-wrap img {
+display: block;
+max-height: 100px;
+max-width: 100px;
+width: auto;
+object-fit: contain;
+border-radius: 4px;
+transition: opacity 0.2s ease; /* smooth fade */
+position: relative;
+z-index: 2;
+}
+
+.header-with-image .img-wrap::after {
+content: "";
+position: absolute;
+inset: 0;                      /* cover the same area as the img */
+background-image: url('website/skull.jpg');
+background-size: contain;      / match object-fit: contain /
+background-repeat: no-repeat;
+background-position: center;
+border-radius: 4px;            / match img corners */
+opacity: 0;
+transition: opacity 0.2s ease;
+z-index: 1;
+pointer-events: none;
+}
+
+.header-with-image .img-wrap:hover img { opacity: 0; }
+.header-with-image .img-wrap:hover::after { opacity: 1; }
+
 /* Responsive: stack vertically on narrow screens */
 @media (max-width: 480px) {
   .header-with-image {
