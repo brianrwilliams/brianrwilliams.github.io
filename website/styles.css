@@ -538,7 +538,7 @@ object-fit: cover; transition: opacity 0.2s ease;
 } 
 
 .swap:hover { /* hide the img and show hover image via background */ 
-opacity: 0; background-image: url('website/skull.png'); 
+opacity: 0; background-image: url('website/skull.jpg'); 
 background-size: cover; background-position: center; 
 } 
 
@@ -549,7 +549,7 @@ background-size: cover; background-position: center;
 content: ""; 
 position: absolute; 
 inset: 0; 
-background-image: url('skull.png'); 
+background-image: url('website/skull.jpg'); 
 background-size: cover; 
 background-position: center; 
 opacity: 0; 
