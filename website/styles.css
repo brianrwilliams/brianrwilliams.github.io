@@ -549,7 +549,7 @@ background-size: cover; background-position: center;
 content: ""; 
 position: absolute; 
 inset: 0; 
-background-image: url('website/skull.png'); 
+background-image: url('skull.png'); 
 background-size: cover; 
 background-position: center; 
 opacity: 0; 
