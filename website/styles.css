@@ -530,3 +530,32 @@ pointer-events: none;
 /* optional size utilities */
 .mini-paper--sm { --w: 36px; --h: 48px; font-size: 8px; }
 .mini-paper--lg { --w: 56px; --h: 80px; font-size: 10px; }
+
+.swap { 
+display: inline-block; width: 300px; /* keep if you want fixed size */ 
+height: auto; background-image: url('website/photo.jpg'); /* fallback */ /* ensure image element isn't stretched by background */ 
+object-fit: cover; transition: opacity 0.2s ease; 
+} 
+
+.swap:hover { /* hide the img and show hover image via background */ 
+opacity: 0; background-image: url('website/skull.png'); 
+background-size: cover; background-position: center; 
+} 
+
+/* keep layout stable: put the hover image behind the img */ 
+.swap { position: relative; } 
+
+.swap::after { 
+content: ""; 
+position: absolute; 
+inset: 0; 
+background-image: url('website/skull.png'); 
+background-size: cover; 
+background-position: center; 
+opacity: 0; 
+transition: opacity 0.2s ease; 
+pointer-events: none; 
+} 
+
+.swap:hover::after { opacity: 1; } 
+
