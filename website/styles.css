@@ -531,31 +531,40 @@ pointer-events: none;
 .mini-paper--sm { --w: 36px; --h: 48px; font-size: 8px; }
 .mini-paper--lg { --w: 56px; --h: 80px; font-size: 10px; }
 
+
 .swap { 
-display: inline-block; width: 300px; /* keep if you want fixed size */ 
-height: auto; background-image: url('website/photo.jpg'); /* fallback */ /* ensure image element isn't stretched by background */ 
-object-fit: cover; transition: opacity 0.2s ease; 
-} 
+display: inline-block; 
+width: 300px; /* set desired width */ 
+height: 200px; /* set desired height (or use auto if you prefer) */ 
+position: relative; /* establish stacking context for ::after */ 
+overflow: hidden; /* keep things inside the box */ 
+}
 
-.swap:hover { /* hide the img and show hover image via background */ 
-opacity: 0; background-image: url('website/skull.jpg'); 
-background-size: cover; background-position: center; 
-} 
+.swap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;         /* keeps image aspect while filling box */
+  display: block;
+  transition: opacity 0.25s ease;
+  position: relative;
+  z-index: 2;                /* keep image above ::after normally */
+}
 
-/* keep layout stable: put the hover image behind the img */ 
-.swap { position: relative; } 
+/* the hover image sits in ::after */
+.swap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('website/skull.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  z-index: 1;                /* behind the main img initially */
+  pointer-events: none;
+}
 
-.swap::after { 
-content: ""; 
-position: absolute; 
-inset: 0; 
-background-image: url('website/skull.jpg'); 
-background-size: cover; 
-background-position: center; 
-opacity: 0; 
-transition: opacity 0.2s ease; 
-pointer-events: none; 
-} 
-
-.swap:hover::after { opacity: 1; } 
+/* on hover, fade out the img and fade in the ::after */
+.swap:hover img { opacity: 0; }
+.swap:hover::after { opacity: 1; }
 
