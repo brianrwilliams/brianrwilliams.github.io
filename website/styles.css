@@ -480,10 +480,10 @@ content: "";
 position: absolute;
 inset: 0;                      /* cover the same area as the img */
 background-image: url('website/skull.jpg');
-background-size: contain;      / match object-fit: contain /
+background-size: contain;      /* match object-fit: contain */
 background-repeat: no-repeat;
 background-position: center;
-border-radius: 4px;            / match img corners */
+border-radius: 4px;            /* match img corners */
 opacity: 0;
 transition: opacity 0.2s ease;
 z-index: 1;
