@@ -456,11 +456,11 @@ font-size: 0.95rem;
 }
 
 .header-with-image .img-wrap {
-position: relative;           /* stacking context for ::after /
-display: inline-block;        / preserves intrinsic img size /
-width: auto;                  / keep current sizing behavior /
+position: relative;           /* stacking context for ::after */
+display: inline-block;        /* preserves intrinsic img size */
+width: auto;                  /* keep current sizing behavior */
 height: auto;
-margin-left: 20px;            / match your current spacing */
+margin-left: 20px;            /* match your current spacing */
 }
 
 .header-with-image .img-wrap img {
