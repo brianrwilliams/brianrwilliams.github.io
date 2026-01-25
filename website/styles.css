@@ -479,7 +479,7 @@ z-index: 2;
 content: "";
 position: absolute;
 inset: 0;                      /* cover the same area as the img */
-background-image: url('website/skull.jpg');
+background-image: url('skull.jpg');
 background-size: contain;      /* match object-fit: contain */
 background-repeat: no-repeat;
 background-position: center;
