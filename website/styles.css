@@ -571,3 +571,79 @@ pointer-events: none;
 .mini-paper--lg { --w: 56px; --h: 80px; font-size: 10px; }
 
 
+/* recipe list layout */
+.recipes-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 30px;
+  max-width: 850px;
+  margin: 0 auto;
+  font-family: 'Inconsolata LGC Nerd Font', monospace;
+  color: #ebdbb2;
+}
+
+.recipe-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #3c3836;
+  border: 1.5px solid #665c54;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  gap: 12px;
+  min-height: 44px;
+  box-sizing: border-box;
+}
+
+.recipe-desc { 
+  flex: 1 1 auto; 
+  min-width: 0; 
+  color: #ebdbb2;
+  /* truncate long descriptions */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.recipe-link, .recipe-link-placeholder {
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #72875b; /* default link color */
+  flex: 0 0 auto;
+  background: transparent;
+  border-radius: 4px;
+}
+
+.recipe-link:hover, .recipe-link:focus {
+  color: #b8bb26;
+  text-decoration: none;
+  outline: none;
+}
+
+/* Font Awesome glyph styling for the &#xf1fb; icon */
+.fa-recipe {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 1;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  text-align: center;
+}
+
+/* Keep placeholder element visually hidden but keeping layout space */
+.recipe-link-placeholder { visibility: hidden; }
+
+/* Responsive: stack on narrow screens */
+@media (max-width: 420px) {
+  .recipe-row { flex-wrap: wrap; align-items: flex-start; }
+  .recipe-desc { order: 0; width: 100%; white-space: normal; }
+  .recipe-link { order: 1; margin-top: 6px; width: 36px; height: 22px; }
+}
+
