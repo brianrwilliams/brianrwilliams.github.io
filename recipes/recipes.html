@@ -2,7 +2,11 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Recipes</title>
+  <title>Simple Two-Column Bakery Menu</title>
+
+  <!-- Font Awesome for glyph &#xf1fb; -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <style>
     body {
       font-family: Arial, Helvetica, sans-serif;
@@ -17,20 +21,31 @@
     header h1 { margin: 0; }
     header p { margin: 6px 0 0 0; color:#444; }
 
+    /* Section card with two columns */
     section { background: #fff; padding: 12px 14px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 0 rgba(0,0,0,0.06); }
-
     section h2 { margin: 0 0 8px 0; font-size: 1.15rem; }
 
-    /* Simple two-column list */
-    .items { width: 100%; border-collapse: collapse; }
-    .items tr { border-bottom: 1px solid rgba(0,0,0,0.06); }
-    .items tr:last-child { border-bottom: none; }
-    .items td { padding: 10px 8px; vertical-align: middle; }
-    .items td.description { width: 70%; }
-    .items td.recipe { width: 30%; text-align: right; }
+    .section-two-col {
+      display: grid;
+      grid-template-columns: 1fr 160px; /* left expands, right fixed for links */
+      gap: 12px;
+      align-items: start;
+    }
+
+    /* Left column: stacked list of descriptions */
+    .desc-list { padding: 0; margin: 0; list-style: none; }
+    .desc-list li { padding: 8px 6px; border-bottom: 1px dashed rgba(0,0,0,0.06); }
+    .desc-list li:last-child { border-bottom: none; }
+
+    /* Right column: aligned links corresponding to items;
+       use a vertical list so each item lines up with descriptions */
+    .link-list { padding: 0; margin: 0; list-style: none; display:flex; flex-direction:column; gap:6px; }
+    .link-list li { display:flex; align-items:center; justify-content:flex-end; padding: 0 4px; min-height: calc(1em + 16px); }
 
     .recipe-link {
-      display: inline-block;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
       padding: 6px 10px;
       background: #316;
       color: #fff;
@@ -39,72 +54,83 @@
       font-size: 0.95rem;
     }
 
-    /* small utility for empty placeholder */
-    .placeholder { color: #888; font-style: italic; }
+    /* Use Font Awesome glyph as requested: show the glyph only */
+    .recipe-link .fa-icon {
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      font-style: normal;
+      /* Use the glyph codepoint (f1fb) as content via pseudo-element if desired.
+         But we can also put the entity in HTML. */
+    }
 
-    @media (max-width: 540px) {
-      .items td.description, .items td.recipe { display: block; width: 100%; text-align: left; }
-      .items td.recipe { margin-top: 6px; }
+    .placeholder { color: #888; font-style: italic; padding: 6px 10px; display:inline-block; }
+
+    @media (max-width: 640px) {
+      .section-two-col { grid-template-columns: 1fr; }
+      .link-list { flex-direction: row; flex-wrap: wrap; gap:8px; justify-content:flex-start; }
+      .link-list li { justify-content:flex-start; }
     }
   </style>
+
+  <link href="../../website/styles.css" type="text/css" rel="stylesheet" />
+
 </head>
 <body>
   <div class="container">
     <header>
       <h1>Sunlit Bakery — Simple Menu</h1>
-      <p>Click recipe links to view or download.</p>
+      <p>Descriptions on the left, recipe links on the right.</p>
     </header>
 
     <section id="bread">
       <h2>Bread</h2>
-      <table class="items" aria-labelledby="bread">
-        <tr>
-          <td class="description">Sourdough Boule — hand-scored, slow-fermented</td>
-          <td class="recipe"><a class="recipe-link" href="recipes/sourdough.pdf">Recipe</a></td>
-        </tr>
-        <tr>
-          <td class="description">Whole Wheat Batard</td>
-          <td class="recipe"><a class="recipe-link" href="recipes/wheat_batard.pdf">Recipe</a></td>
-        </tr>
-        <tr>
-          <td class="description">Rye Loaf</td>
-          <td class="recipe"><span class="placeholder">No recipe</span></td>
-        </tr>
-      </table>
+      <div class="section-two-col">
+        <ul class="desc-list" aria-labelledby="bread">
+          <li>Sourdough Boule — hand-scored, slow-fermented</li>
+          <li>Whole Wheat Batard</li>
+          <li>Rye Loaf</li>
+        </ul>
+
+        <ul class="link-list" aria-hidden="false">
+          <li><a class="recipe-link" href="recipes/sourdough.pdf"><span class="fa-icon">&#xf1fb;</span> Recipe</a></li>
+          <li><a class="recipe-link" href="recipes/wheat_batard.pdf"><span class="fa-icon">&#xf1fb;</span> Recipe</a></li>
+          <li><span class="placeholder">No recipe</span></li>
+        </ul>
+      </div>
     </section>
 
     <section id="sweets">
       <h2>Sweets</h2>
-      <table class="items" aria-labelledby="sweets">
-        <tr>
-          <td class="description">Cinnamon Babka (best-seller)</td>
-          <td class="recipe"><a class="recipe-link" href="recipes/babka.pdf">Recipe</a></td>
-        </tr>
-        <tr>
-          <td class="description">Chocolate Chip Cookies</td>
-          <td class="recipe"><a class="recipe-link" href="recipes/cookies.pdf">Recipe</a></td>
-        </tr>
-      </table>
+      <div class="section-two-col">
+        <ul class="desc-list" aria-labelledby="sweets">
+          <li>Cinnamon Babka (best-seller)</li>
+          <li>Chocolate Chip Cookies</li>
+          <li>Lemon Tart</li>
+        </ul>
+
+        <ul class="link-list">
+          <li><a class="recipe-link" href="recipes/babka.pdf"><span class="fa-icon">&#xf1fb;</span> Recipe</a></li>
+          <li><a class="recipe-link" href="recipes/cookies.pdf"><span class="fa-icon">&#xf1fb;</span> Recipe</a></li>
+          <li><a class="recipe-link" href="recipes/lemon_tart.pdf"><span class="fa-icon">&#xf1fb;</span> Recipe</a></li>
+        </ul>
+      </div>
     </section>
 
     <section id="savory">
       <h2>Savory</h2>
-      <table class="items" aria-labelledby="savory">
-        <tr>
-          <td class="description">Rosemary Focaccia — sea salt</td>
-          <td class="recipe"><a class="recipe-link" href="recipes/focaccia.pdf">Recipe</a></td>
-        </tr>
-        <tr>
-          <td class="description">Spinach & Feta Croissant</td>
-          <td class="recipe"><span class="placeholder">No recipe</span></td>
-        </tr>
-      </table>
+      <div class="section-two-col">
+        <ul class="desc-list" aria-labelledby="savory">
+          <li>Rosemary Focaccia — sea salt</li>
+          <li>Spinach & Feta Croissant</li>
+        </ul>
+
+        <ul class="link-list">
+          <li><a class="recipe-link" href="recipes/focaccia.pdf"><span class="fa-icon">&#xf1fb;</span> Recipe</a></li>
+          <li><span class="placeholder">No recipe</span></li>
+        </ul>
+      </div>
     </section>
+
   </div>
 </body>
 </html>
-
-If you want:
-- An editable form to add items dynamically (client-side JS) — I can add that.
-- CSV/JSON import or export — I can add simple code for that too.
-- Different column widths or an additional "price" column — say which and I'll adjust.
