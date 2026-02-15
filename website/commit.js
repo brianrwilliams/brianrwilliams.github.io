@@ -4,7 +4,7 @@
 
 (function () {
   const owner = "brianrwilliams"; // <-- change this
-  const repo  = "brianrwilliams.githu.io";               // <-- change this
+  const repo  = "brianrwilliams.github.io";               // <-- change this
   const branch = "main";                        // <-- change if needed
 
   // ID of the container element to render into
