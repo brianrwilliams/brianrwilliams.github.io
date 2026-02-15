@@ -3,8 +3,8 @@
 // Configure owner/repo/branch below.
 
 (function () {
-  const owner = "YOUR_GITHUB_USERNAME_OR_ORG"; // <-- change this
-  const repo  = "YOUR_REPO_NAME";               // <-- change this
+  const owner = "brianrwilliams"; // <-- change this
+  const repo  = "brianrwilliams.githu.io";               // <-- change this
   const branch = "main";                        // <-- change if needed
 
   // ID of the container element to render into
