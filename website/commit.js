@@ -5,7 +5,7 @@
 (function () {
   const owner = "brianrwilliams"; // <-- change this
   const repo  = "brianrwilliams.github.io";               // <-- change this
-  const branch = "main";                        // <-- change if needed
+  const branch = "master";                        // <-- change if needed
 
   // ID of the container element to render into
   const CONTAINER_ID = "latest-commit";
