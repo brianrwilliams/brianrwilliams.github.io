@@ -35,11 +35,11 @@
       <div style="font-weight:600;margin-bottom:0.25rem;">
         <a href="${commitUrl}" target="_blank" rel="noopener noreferrer">${escapeHtml(message)}</a>
       </div>
-      <div style="font-size:0.9rem;color:#444;">
+      <div style="font-size:0.5rem;color:#444;">
         <span>${escapeHtml(authorName)}</span>
-        <span style="margin:0 0.5rem;color:#999">•</span>
+        <span style="margin:0 0.3rem;color:#999">•</span>
         <time datetime="${escapeHtml(dateISO || '')}">${date ? date.toLocaleString() : "unknown date"}</time>
-        <span style="margin-left:0.5rem;color:#999">(${escapeHtml(sha)})</span>
+        <span style="margin-left:0.3rem;color:#999">(${escapeHtml(sha)})</span>
       </div>
     `;
   }
