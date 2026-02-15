@@ -1,0 +1,95 @@
+% File: quiz/quiz_0213.tex
+
+\documentclass[12pt]{article}
+
+% Load your custom style package
+\usepackage{/Users/bwill22/brianrwilliams.github.io/new_style}
+\usepackage{/Users/bwill22/brianrwilliams.github.io/macros-master}
+
+% Additional packages needed for this quiz template
+\usepackage{amssymb,amsmath,amsthm}
+
+% Itemize and enumerate styles consistent with your style package can remain default
+
+% Page geometry and header/footer can be customized here:
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\headfam\headweight Page \thepage}
+% Title formatting uses your package's redefinition, so normal \title works
+\title{MA 442 - practice problems for exam 1}
+\date{February 13}
+
+\begin{document}
+
+\maketitle
+\vspace{-1em}
+\noindent
+\begin{tabular}{@{}p{1cm}p{8cm}p{1cm}p{5cm}@{}}
+\textbf{Name:} & \hrulefill & \textbf{BUID:} & \hrulefill \\
+\end{tabular}
+
+\vspace{2cm}
+
+A collection of problems designed to help you prepare for midterm exam 1.
+These problems are by no means exhaustive, but they are in the same style that will appear on the exam.
+
+\vspace{1cm} 
+
+\begin{question}
+Let $\sfV$ be a finite-dimensional vector space over $\RR$.
+In class we (will) show that the set of \textit{all} linear maps $\sfV \to \RR$ is naturally a vector space; we denote
+this vector space by $\op{Hom}(\sfV,\RR)$.
+Express
+\[
+\dim \op{Hom}(\sfV, \sfW) 
+\]
+in terms of $\dim V$. (Hint: Given a basis for $\sfV$ can you construct a basis for $\op{Hom}(\sfV,\RR)$?)
+\end{question}
+
+\begin{question}
+  Let $\sfV$ be any vector space and suppose that $B = \{v_1,v_2,v_3,v_4\}$ is an ordered basis.
+  Define the linear transformation $\sfT \colon \sfV \to \sfV$ by the formulas 
+  \[
+    \sfT(v_1) = v_1 + v_2,  \; \sfT(v_2) = v_2 + v_3, \; \sfT(v_3) = v_3 + v_4, \; \sfT(v_4) = v_4 .
+  \]
+  Find the matrix representation of $T$ with respect to this ordered basis. 
+  (So, compute $[\sfT]_B$.)
+\end{question}
+
+\begin{question}
+  Suppose that $\sfT \colon \RR^2 \to \RR^2$ linear transformation with the property that $\dim \ker \sfT = 1$.
+  Prove that there exists bases $B$ and $B'$ of $\RR^2$ such that the matrix representation of $\sfT$ is 
+  \begin{equation}\label{}
+    [\sfT]_B^{B'} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix} .
+  \end{equation}
+\end{question}
+
+\begin{question}
+  Recall that $\RR[x]$ is the vector space of all real polynomials.
+  Let $\sfE \subset \RR[x]$ be the subset of \textit{even} polynomials (so, only even powers of $x$ can appear, like $3
+  + 4 x^6 + 9x^{38}$).
+  Let $\sfU \subset \RR[x]$ be the subset of \textit{odd} polynomials (so, only odd powers of $x$ can appear like
+  $2x + x^7 + 6 x^{29}$.)
+  \begin{itemize}
+    \item[(a)] Prove that both $\sfE$ and $\sfU$ are subspaces of $\RR[x]$.
+    \item[(b)] Prove that $\RR[x] = \sfE \oplus \sfU$.
+  \end{itemize}
+\end{question}
+
+\begin{question}
+  Prove that there exists a linear transformation $\sfT \colon \RR^2 \to \RR^3$ such that $\sfT(1,1) = (1,0,2)$, $\sfT(2,3) =
+  (1,1,3)$.
+  Also, compute $\sfT(7,10)$.
+\end{question}
+
+\begin{question}This question has two parts.
+  \begin{itemize}
+    \item[(a)] Suppose that $\sfW_1$ and $\sfW_2$ are two two-dimensional subspaces in $\RR^3$.
+  Prove that their intersection must contain a nonzero vector. In other words, prove that $\sfW_1 \cap \sfW_2 \ne \{0\}$.
+\item[(b)] Provide an example of two two-dimensional subspaces in $\RR^4$ which intersect at single point.
+\end{itemize}
+  In other words, two planes cannot intersect at a single point in $\RR^3$ but they can in $\RR^4$!
+  \end{question}
+\end{document}
