@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+
+% Load your custom style package
+\usepackage{/Users/bwill22/brianrwilliams/new_style}
+\usepackage{/Users/bwill22/brianrwilliams/macros-master}
+
+% Additional packages needed for this quiz template
+\usepackage{amssymb,amsmath,amsthm}
+
+% Itemize and enumerate styles consistent with your style package can remain default
+
+% Page geometry and header/footer can be customized here:
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\headfam\headweight Page \thepage}
+% Title formatting uses your package's redefinition, so normal \title works
+\title{MA 442 - Midterm 1 follow-up}
+\date{February 18}
+
+\begin{document}
+
+\maketitle
+\vspace{-1em}
+\noindent
+\begin{tabular}{@{}p{1cm}p{8cm}p{1cm}p{5cm}@{}}
+\textbf{Name:} & \hrulefill & \textbf{BUID:} & \hrulefill \\
+\end{tabular}
+
+\vspace{4pt}
+
+This is a two-part question which remedies a typo on the exam. Please turn it in to me by \textbf{Thursday, March 5} to replace your lowest score on a
+single problem from midterm 1.
+You may ask about this question in discussion or office hours.
+
+\begin{question}
+  \begin{itemize}
+    \item[(a)] Produce a linear transformation $\sfT \colon \RR^2 \to \RR^2$ with the property that there does \textbf{not} exist a basis
+  $\beta$ of $\RR^2$ such that $[\sfT]_\beta = \begin{bmatrix} a & 0 \\ 0 & 0 \end{bmatrix}$ for some scalar $a \in
+  \RR$. (Hint: consider the transformation $\sfT$ defined by $\sfT(x,y) = (y,0)$.)
+    \item[(b)] If $\sfT \colon \sfV \to \sfV$ is a linear transformation with $\dim \sfV = 2$ and $\dim \ker \sfT = 1$,
+      then show that there exists bases $\beta,\gamma$ of $\sfV$ with the property that 
+      \begin{equation}\label{}
+        [\sfT]_\beta^\gamma = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix} .
+      \end{equation}
+\end{itemize}
+\end{question}
+
+\vspace{4pt} 
+
+\end{document}
