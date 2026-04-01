@@ -37,8 +37,6 @@ def create_quiz(date_mmdd):
 \\usepackage{{fancyhdr}}
 \\pagestyle{{fancy}}
 \\fancyhf{{}}
-\\fancyhead[L]{{\\headfam\\headweight Quiz}}
-\\fancyhead[C]{{\\headfam\\itshape\\large\\thetitle}}
 \\fancyhead[R]{{\\headfam\\headweight Page \\thepage}}
 % Title formatting uses your package's redefinition, so normal \\title works
 \\title{{MA 442 - Quiz}}
@@ -115,8 +113,8 @@ def create_solution(section_input):
     content = f"""\\documentclass[12pt]{{article}}
 
 % Load your custom style package
-\\usepackage{{/Users/bwill22/brianrwilliams.github.io/new_style}}
-\\usepackage{{/Users/bwill22/brianrwilliams.github.io/macros-master}}
+\\usepackage{{/Users/bwill22/brianrwilliams/new_style}}
+\\usepackage{{/Users/bwill22/brianrwilliams/macros-master}}
 
 % Additional packages needed for this quiz template
 \\usepackage{{amssymb,amsmath,amsthm}}
@@ -128,8 +126,6 @@ def create_solution(section_input):
 \\usepackage{{fancyhdr}}
 \\pagestyle{{fancy}}
 \\fancyhf{{}}
-\\fancyhead[L]{{\\headfam\\headweight Quiz}}
-\\fancyhead[C]{{\\headfam\\itshape\\large\\thetitle}}
 \\fancyhead[R]{{\\headfam\\headweight Page \\thepage}}
 % Title formatting uses your package's redefinition, so normal \\title works
 \\title{{Solutions to selected exercises from \\S {{{section_input}}}}}
@@ -138,7 +134,7 @@ def create_solution(section_input):
 
 \\maketitle
 
-\\subsection{{Question ??}}
+\\subsection*{{Question ??}}
 \\end{{document}}
 """
     with open(filename, 'w') as f:
