@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MA563</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="../website/styles.css" type="text/css" rel="stylesheet">
+
+  <style>
+    #header h2, #header h3 {
+      margin: 0.2em 0;
+    }
+
+    body {
+      background-color: #dfd0df;
+    }
+
+    .course-panel {
+      background-color: #3c3836;
+      border: 2px solid #665c54;
+      padding: 20px;
+      max-width: 900px;
+      margin: 1.5em auto;
+      font-family: 'Inconsolata LGC Nerd Font', monospace;
+      color: #ebdbb2;
+    }
+
+    .course-panel a {
+      color: #72875b;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .course-panel a:hover,
+    .course-panel a:focus {
+      color: #b8bb26;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .course-panel {
+        padding: 15px 10px;
+        margin: 1em 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <div id="header" style="text-align:center;">
+      <h2>MA563: Introduction to Differential Geometry.</h2>
+      <h3>Fall 2026</h3>
+    </div>
+
+    <div class="course-panel">
+      This is a proof-based introduction to differential geometry, beginning
+      with curves and surfaces in Euclidean space and continuing to intrinsic
+      geometry and Riemannian manifolds. A syllabus can be found
+      <a href="syllabus.pdf">here</a>.<br>
+
+      The course text is Wolfgang K&uuml;hnel,
+      <i>Differential Geometry: Curves&ndash;Surfaces&ndash;Manifolds</i>, third edition.
+
+      <div style="display: flex; justify-content: center; gap: 60px; margin: 20px 0;">
+        <div style="text-align: center;">
+          <h5>Lecture</h5>
+          <b>Time:</b> T/Th 2:00pm &ndash; 3:15pm.<br>
+          <b>Location:</b> CAS 214<br>
+        </div>
+      </div>
+    </div>
+
+    <div class="course-panel">
+      <h4>Course schedule and notes</h4>
+      <p>
+        Approximate sections of K&uuml;hnel are indicated in
+        <span style="color: #fabd2f;">yellow.</span>
+      </p>
+
+      <div class="schedule-grid">
+        <div class="sched-row">
+          <div class="sched-text">Lecture 1: Prerequisites from calculus.</div>
+          <span style="color: #fabd2f;">Chapter 1</span>
+          <a class="sched-link" href="lecture/lecture1.pdf" aria-label="Lecture 1 notes">
+            <span class="fa-icon" aria-hidden="true">&#xf044;</span>
+          </a>
+        </div>
+
+        <div class="sched-row">
+          <div class="sched-text">Lecture 2: Regular curves, arclength, and curvature.</div>
+          <span style="color: #fabd2f;">&sect;&sect;2A&ndash;2B</span>
+          <a class="sched-link" href="lecture/lecture2.pdf" aria-label="Lecture 2 notes">
+            <span class="fa-icon" aria-hidden="true">&#xf044;</span>
+          </a>
+        </div>
+
+        <div class="sched-row">
+          <div class="sched-text">Lecture 3: Torsion and Frenet curves.</div>
+          <span style="color: #fabd2f;">&sect;&sect;2B&ndash;2D</span>
+          <a class="sched-link" href="lecture/lecture3.pdf" aria-label="Lecture 3 notes">
+            <span class="fa-icon" aria-hidden="true">&#xf044;</span>
+          </a>
+        </div>
+
+        <div class="sched-row">
+          <div class="sched-text">Lecture 4: The global theory of curves.</div>
+          <span style="color: #fabd2f;">&sect;2F</span>
+          <a class="sched-link" href="lecture/lecture4.pdf" aria-label="Lecture 4 notes">
+            <span class="fa-icon" aria-hidden="true">&#xf044;</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="course-panel">
+      <h4>Problem sets</h4>
+      <p>
+        Suggested exercises from K&uuml;hnel are listed below. Selected solutions
+        are posted when available.
+      </p>
+
+      <div class="exercise-grid">
+        <div class="exercise-item">
+          <div class="exercise-section">Chapter 2</div>
+          <div class="exercise-content">
+            1, 4, 5, 7, 9, 10, 12, 16, 18, 20, 23
+          </div>
+          <div class="exercise-solution">
+            <a class="sched-link" href="problems/problems2.pdf" aria-label="Chapter 2 selected solutions">
+              <span class="fa-icon" aria-hidden="true">&#xf044;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="course-panel">
+      <h4>Project</h4>
+      <p>
+        The group project is worth 25% of the course grade. Groups of two or
+        three will prepare a 6&ndash;10 page mathematical expository paper and give
+        a joint presentation. Complete expectations, suggested topics, and the
+        grading rubric are in the <a href="project.pdf">project handout</a>.
+      </p>
+
+      <div class="quiz-grid">
+        <div class="quiz-item">
+          <div class="quiz-date">Oct 8</div>
+          <div class="quiz-links">Partner and topic selection</div>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-date">Oct 22</div>
+          <div class="quiz-links">Preliminary bibliography and proposal</div>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-date">Dec 1</div>
+          <div class="quiz-links">Written report due</div>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-date">Dec 3, 8</div>
+          <div class="quiz-links">Project presentations</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
