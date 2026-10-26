@@ -13,8 +13,10 @@
       margin: 0.2em 0;
     }
 
-    body {
-      background-color: DFD0DF;
+    #container {
+      box-sizing: border-box;
+      width: calc(100% - 24px);
+      max-width: 844px;
     }
 
     .course-panel {
@@ -130,33 +132,74 @@
       line-height: 1.4;
     }
 
-    .project-resources {
+    #project p {
+      margin: 0.75rem 0;
+      line-height: 1.6;
+    }
+
+    #project h5 {
+      margin: 1.75rem 0 0.75rem;
+      color: #fabd2f;
+      font-size: 1rem;
+    }
+
+    .project-requirements {
+      padding-left: 1.3rem;
+      line-height: 1.6;
+    }
+
+    .project-requirements li + li {
+      margin-top: 0.6rem;
+    }
+
+    .topic-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 12px;
-      margin-top: 1rem;
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0 0;
     }
 
-    .resource-card {
-      padding: 13px 15px;
+    .topic-card {
+      padding: 16px;
       background: #282828;
-      border: 1.5px dashed #665c54;
+      border: 1.5px solid #665c54;
       border-radius: 5px;
+      min-width: 0;
     }
 
-    .resource-card strong,
-    .resource-card span {
-      display: block;
+    .topic-card h6 {
+      margin: 0 0 0.6rem;
+      font-size: 1rem;
+      line-height: 1.5;
     }
 
-    .resource-card strong {
-      margin-bottom: 0.35rem;
-      color: #b8bb26;
-    }
-
-    .resource-card span {
-      color: #a89984;
+    #project .topic-card p {
+      margin: 0;
       font-size: 0.9rem;
+      color: #c5b9a3;
+    }
+
+    #project a {
+      color: #b3bf9a;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    #project a:hover {
+      color: #d2d9c3;
+    }
+
+    #project a:focus-visible {
+      outline: 2px solid #fabd2f;
+      outline-offset: 4px;
+    }
+
+    .topic-format {
+      white-space: nowrap;
+      font-size: 0.8rem;
+      font-weight: normal;
     }
 
     @media (max-width: 600px) {
@@ -165,7 +208,9 @@
         margin: 1em 10px;
       }
 
-      .exam-grid {
+      .exam-grid,
+      .topic-grid,
+      .schedule-grid {
         grid-template-columns: 1fr;
       }
 
@@ -415,14 +460,37 @@
       </div>
     </section>
 
-    <div class="course-panel">
-      <h4>Project</h4>
+    <section class="course-panel" id="project" aria-labelledby="project-heading">
+      <h4 id="project-heading">Final project</h4>
       <p>
-        The group project is worth 25% of the course grade. Groups of two or
-        three will prepare a 6&ndash;10 page mathematical expository paper and give
-        a joint presentation. Complete expectations, suggested topics, and the
-        grading rubric are in the <a href="project.pdf">project handout</a>.
+        Work in <strong>pairs</strong> on one of the topic sheets below.
+        Each sheet contains <strong>five connected problems</strong> exploring
+        ideas beyond our lectures through proofs, computations, and examples.
+        The project is worth <strong>25% of the course grade</strong>.
       </p>
+      <ul class="project-requirements">
+        <li>
+          <strong>Written solutions:</strong> submit one joint
+          <strong>5&ndash;10-page, cleanly typeset PDF generated using LaTeX</strong>.
+          Address all five problems, organized by problem number. This is a
+          polished solution write-up, not a separate expository essay.
+        </li>
+        <li>
+          <strong>Mathematical expectations:</strong> define notation, justify
+          your arguments, and cite sources where used, with a short bibliography.
+          Give proofs unless the sheet explicitly permits quoting a result;
+          distinguish conjectures and numerical evidence from proofs.
+        </li>
+        <li>
+          <strong>Presentation:</strong> give a joint <strong>20-minute talk</strong>,
+          followed by brief questions. Highlight a central result, a proof idea,
+          and an illuminating example. Both partners should speak and understand
+          the entire project.
+        </li>
+      </ul>
+
+      <h5>Important dates</h5>
+      <p>The project deadlines are unchanged.</p>
 
       <ol class="project-timeline" aria-label="Project timeline">
         <li class="timeline-step">
@@ -436,39 +504,46 @@
         </li>
 
         <li class="timeline-step">
-          <span class="timeline-date">Dec 1</span>
-          <span class="timeline-label">Written report due</span>
+          <time class="timeline-date" datetime="2026-12-01">Dec 1</time>
+          <span class="timeline-label">Written solutions due</span>
         </li>
 
         <li class="timeline-step">
-          <span class="timeline-date">Dec 3, 8</span>
+          <span class="timeline-date"><time datetime="2026-12-03">Dec 3</time>, <time datetime="2026-12-08">8</time></span>
           <span class="timeline-label">Project presentations</span>
         </li>
       </ol>
 
-      <h5>Project resources</h5>
-      <div class="project-resources">
-        <div class="resource-card">
-          <strong>Sample bibliography</strong>
-          <span>Coming soon</span>
-        </div>
-
-        <div class="resource-card">
-          <strong>Sample proposal</strong>
-          <span>Coming soon</span>
-        </div>
-
-        <div class="resource-card">
-          <strong>Sample write-up</strong>
-          <span>Coming soon</span>
-        </div>
-
-        <div class="resource-card">
-          <strong>Presentation resources</strong>
-          <span>Coming soon</span>
-        </div>
-      </div>
-    </div>
+      <h5 id="topic-sheets-heading">Choose a topic</h5>
+      <p>Each PDF includes the five problems, submission instructions, and suggested references.</p>
+      <ul class="topic-grid" aria-labelledby="topic-sheets-heading">
+        <li class="topic-card">
+          <h6><a href="topics/smooth_manifolds.pdf">Smooth manifolds <span class="topic-format">(PDF)</span></a></h6>
+          <p>Charts, tangent spaces, and the connection between intrinsic manifolds and embeddings.</p>
+        </li>
+        <li class="topic-card">
+          <h6><a href="topics/vector_bundles.pdf">Vector bundles <span class="topic-format">(PDF)</span></a></h6>
+          <p>Local trivializations, global frames, the M&ouml;bius bundle, and the hairy-ball theorem.</p>
+        </li>
+        <li class="topic-card">
+          <h6><a href="topics/geodesics_clairaut.pdf">Geodesics and Clairaut&rsquo;s relation <span class="topic-format">(PDF)</span></a></h6>
+          <p>Conserved quantities and geodesics on cones, spheres, and tori.</p>
+        </li>
+        <li class="topic-card">
+          <h6><a href="topics/lie_groups.pdf">Lie groups <span class="topic-format">(PDF)</span></a></h6>
+          <p>Rotations, tangent matrices, Lie brackets, and the matrix exponential.</p>
+        </li>
+        <li class="topic-card">
+          <h6><a href="topics/differential_forms.pdf">Differential forms and Stokes&rsquo; theorem <span class="topic-format">(PDF)</span></a></h6>
+          <p>Closed and exact forms, local potentials, and how integrals detect holes.</p>
+        </li>
+        <li class="topic-card">
+          <h6><a href="topics/minimal_surfaces.pdf">Minimal surfaces <span class="topic-format">(PDF)</span></a></h6>
+          <p>First variation of area, minimal graphs, and the catenoid&ndash;helicoid family.</p>
+        </li>
+      </ul>
+      <!-- The earlier essay-based project.pdf is superseded by the instructions above and the topic sheets. -->
+    </section>
   </div>
 </body>
 </html>
